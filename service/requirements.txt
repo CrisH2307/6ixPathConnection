@@ -4,5 +4,6 @@ openai
 networkx
 pandas
 python-dotenv
-"fastapi[standard]"
+fastapi[standard]
 networkx
+matplotlib
