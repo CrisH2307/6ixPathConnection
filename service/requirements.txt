@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+openai
+networkx
+pandas
+python-dotenv
