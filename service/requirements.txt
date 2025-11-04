@@ -4,3 +4,4 @@ openai
 networkx
 pandas
 python-dotenv
+"fastapi[standard]"
