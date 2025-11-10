@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Travis Liu",
+    "company": "RBC",
+    "role": "Software Engineer in Test",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "API Testing",
+      "Docker",
+      "Dynatrace",
+      "Elastic Stack (ELK)",
+      "Google Cloud Platform (GCP)",
+      "Kubernetes",
+      "Next.js",
+      "OpenShift",
+      "Project Management",
+      "React.js",
+      "REST APIs",
+      "Selenium",
+      "Server Administration",
+      "Software Testing",
+      "Test Automation",
+      "Test Engineering",
+      "Test Methodologies",
+      "Troubleshooting"
+    ],
+    "keywords": [
+      "CI/CD",
+      "DynamoDB",
+      "ELK",
+      "fintech",
+      "observability",
+      "QA automation",
+      "reliability",
+      "SDET",
+      "developer experience",
+      "Kubernetes",
+      "OpenShift"
+    ],
+    "seniority": "Other"
+  }
+]
