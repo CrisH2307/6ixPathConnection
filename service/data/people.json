@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Travis Liu",
+    "company": "RBC",
+    "role": "Software Engineer in Test",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Selenium",
+      "Test Automation",
+      "Test Engineering",
+      "Software Testing",
+      "API Testing",
+      "Web Testing",
+      "CI/CD",
+      "Kubernetes",
+      "OpenShift",
+      "Docker",
+      "Elastic Stack (ELK)",
+      "Dynatrace",
+      "REST APIs",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "MongoDB",
+      "SQL",
+      "Database Testing",
+      "OAuth",
+      "Jest",
+      "GitHub",
+      "DevOps",
+      "Project Management"
+    ],
+    "keywords": [
+      "automation",
+      "cloud-native",
+      "observability",
+      "UI testing",
+      "API testing"
+    ],
+    "seniority": "Other"
+  }
+]

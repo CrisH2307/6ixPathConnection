@@ -7,3 +7,6 @@ python-dotenv
 fastapi[standard]
 networkx
 matplotlib
+openai>=1.40.0
+pydantic
+requests
