@@ -4,7 +4,7 @@ from typing import List, Literal, Optional
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, Field, ValidationError, ConfigDict
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -25,6 +25,9 @@ class ExtractIn(BaseModel):
     text: str = Field(..., description="Raw pasted LinkedIn profile text")
 
 class ProfileOut(BaseModel):
+    model_config = ConfigDict(populate_by_name=True, extra="ignore")
+
+    id: Optional[str] = Field(default=None, alias="_id", serialization_alias="_id")
     name: str
     company: Optional[str] = ""
     role: Optional[str] = ""
@@ -120,9 +123,16 @@ def _postprocess(d: dict) -> dict:
     return d
 
 def _slug(p: dict) -> str:
-    return "||".join([p.get("name","").strip().lower(),
-                      p.get("company","").strip().lower(),
-                      p.get("role","").strip().lower()])
+    if not isinstance(p, dict):
+        return ""
+    pid = (p.get("_id") or p.get("id") or "").strip().lower()
+    if pid:
+        return pid
+    return "||".join([
+        p.get("name", "").strip().lower(),
+        p.get("company", "").strip().lower(),
+        p.get("role", "").strip().lower(),
+    ])
 
 def _load_people() -> list:
     try:
@@ -180,7 +190,7 @@ def ingest_people(payload: IngestIn):
     index = { _slug(p): i for i, p in enumerate(store) }
     inserted = updated = 0
     for p in payload.people:
-        pd = json.loads(p.model_dump_json())
+        pd = json.loads(p.model_dump_json(by_alias=True))
         key = _slug(pd)
         if key in index:
             store[index[key]] = pd
