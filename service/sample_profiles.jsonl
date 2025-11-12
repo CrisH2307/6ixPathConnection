@@ -37,7 +37,7 @@
   },
   {
     "id": "khoivu",
-    "text": "Name: Khoi Vu\nHeadline: Full-stack Developer — RBC (BattleSnake Champion)\nLocation: Toronto, Ontario, Canada\n\nAbout: Full-stack developer at RBC. Noted in public profile for winning RBC BattleSnake coding competitions (top in Canada). Builds and maintains production-grade applications and enjoys competitive programming.\n\nExperience:\n• Full-stack Developer — RBC, (Dates)\n  Work: Build features across frontend and backend, integrate services, write tests, collaborate with product/DevOps.\n• Previous projects/hackathons — (Dates)\n\nEducation:\n• University/College in Canada (confirm in LinkedIn)\n\nSkills: JavaScript/TypeScript; React; Node.js; REST APIs; SQL; Git; CI/CD; Competitive Programming."
+    "text": "Name: Khoi Vu\nHeadline: Full-stack Developer — RBC (BattleSnake Champion)\nLocation: Toronto, Ontario, Canada\n\nAbout: Full-stack developer at RBC. Noted in public profile for winning RBC BattleSnake coding competitions (top in Canada). Builds and maintains production-grade applications and enjoys competitive programming.\n\nExperience:\n• Full-stack Developer — RBC, (Dates)\n  Work: Build features across frontend and backend, integrate services, write tests, collaborate with product/DevOps.\n• Previous projects/hackathons — (Dates)\n\nEducation:\n• University: Seneca College/Polytechnic\n\nSkills: JavaScript/TypeScript; React; Node.js; REST APIs; SQL; Git; CI/CD; Competitive Programming."
   },
   {
     "id": "aryank1511",
@@ -153,7 +153,7 @@
   },
   {
     "id": "natalie-vu-6a7ab9167",
-    "text": "Name: Natalie Vu\nHeadline: (fill from LinkedIn — e.g. Analyst / Student / TA @ Canadian school)\nLocation: Toronto / Ontario, Canada (assumed)\n\nAbout: Professional or student profile to be completed once LinkedIn text is available. Add domain (finance, marketing, tech, HR) when you paste the real sections.\n\nExperience:\n• Current Role — (Company), (Dates)\n  Work: Add responsibilities, tools, and achievements from LinkedIn.\n• Previous/Volunteer Role — (Organization), (Dates)\n\nEducation:\n• (School name) — (Program)\n\nSkills: MS Office; Communication; Teamwork; Organization; (replace with real skills from LinkedIn)."
+    "text": "Name: Natalie Vu\nHeadline: Senior Software Developer at RBC\nLocation: Toronto / Ontario, Canada (assumed)\n\nAbout: N/a\n\nExperience:\n• Current Role — Senior Full Stack Developer(May 2022 - Present)\n  Work: Senior Software Developer (May 2025 - Present), Full Stack Developer (Jan 2024 - May 2025), Software Developer (May 2023 - Dec 2023)\n• \n\nEducation:\n• Seneca Polytechnic / College — Computer and Programming Analysis\n\nSkills: MS Office; Communication; Teamwork; Organization; React; Node.js; REST APIs; Git, C++, C#, SQL, JavaScript, HTML, CSS, TypeScript, Agile, Scrum, Problem Solving."
   },
   {
     "id": "anthony---lam",
@@ -514,5 +514,77 @@
   {
     "id": "kpmg_advisory_04",
     "text": "Name: Harsh Patel\nHeadline: Advisory Associate — KPMG Deal Advisory\nLocation: Toronto, Ontario, Canada\n\nAbout: I work on due diligence for mid-market deals.\n\nExperience:\n• Associate — KPMG, 2022–Present\n\nEducation:\n• York — BBA\n\nSkills: Excel; Financial Analysis; Report Writing."
+  },
+  {
+    "id": "rbc_vp_digital_01",
+    "text": "Name: Michelle Clarke\nHeadline: Vice President, Digital Channels — RBC\nLocation: Toronto, Ontario, Canada (Hybrid)\n\nAbout: Senior banking executive leading digital channel strategy and delivery for RBC’s personal and commercial customers. I partner with Technology & Ops, Product, and Risk to release secure, customer-first features across web and mobile. Passionate about talent development and building inclusive teams.\n\nExperience:\n• Vice President, Digital Channels — RBC, 2022–Present\n  Work: Own digital roadmap, OKRs, and channel performance; sponsor large modernization programs; manage senior product and delivery leads.\n• Senior Director, Digital Experience — RBC, 2018–2022\n• Director, Online Banking — RBC, 2014–2018\n\nEducation:\n• Schulich School of Business, York University — MBA\n• University of Toronto — BComm\n\nSkills: Digital Strategy; Product Leadership; P&L Management; Stakeholder Management; Financial Services; Agile at Scale; People Leadership."
+  },
+  {
+    "id": "meta_principal_eng_01",
+    "text": "Name: David Huang\nHeadline: Principal Software Engineer — Meta | Infra & Performance\nLocation: Menlo Park, CA, United States\n\nAbout: Principal-level engineer driving performance, reliability, and cost-optimization initiatives for Meta’s core services. I partner with product and infra orgs to define technical direction, de-risk large migrations, and mentor senior engineers.\n\nExperience:\n• Principal Software Engineer — Meta, 2020–Present\n• Senior Software Engineer — Meta, 2016–2020\n• Software Engineer — Google, 2011–2016\n\nEducation:\n• Carnegie Mellon University — MS, Computer Science\n• University of Illinois at Urbana-Champaign — BS, Computer Engineering\n\nSkills: Distributed Systems; Performance Engineering; Large-Scale Migrations; Technical Strategy; Mentoring; C++/Hack/Python."
+  },
+  {
+    "id": "google_staff_eng_01",
+    "text": "Name: Priya Raman\nHeadline: Staff Software Engineer — Google Cloud (Data & Storage)\nLocation: Waterloo, Ontario, Canada\n\nAbout: Staff engineer responsible for the technical direction of storage/data services in Google Cloud. I write design docs, lead cross-team reviews, and keep our APIs backward compatible for enterprise customers.\n\nExperience:\n• Staff Software Engineer — Google, 2019–Present\n• Senior Software Engineer — Google, 2014–2019\n• Software Engineer — Amazon, 2010–2014\n\nEducation:\n• University of Waterloo — MMath, Computer Science\n\nSkills: Java; Go; Distributed Storage; API Design; Technical Leadership; Cross-Org Collaboration."
+  },
+  {
+    "id": "amazon_principal_sde_01",
+    "text": "Name: Marko Petrovic\nHeadline: Principal SDE — Amazon | Payments & FinTech\nLocation: Vancouver, BC, Canada\n\nAbout: Principal engineer in Amazon Payments defining long-term technical vision for high-throughput financial services. I own architecture reviews, ensure services meet regulatory/security requirements, and coach SDM/SDE2 teams.\n\nExperience:\n• Principal SDE — Amazon, 2021–Present\n• Senior SDE — Amazon, 2016–2021\n• SDE — Microsoft, 2011–2016\n\nEducation:\n• University of Belgrade — BSc, Computer Engineering\n\nSkills: Distributed Systems; Event-Driven Architectures; PCI/Security Best Practices; Design Reviews; Mentoring; Java/Kotlin."
+  },
+  {
+    "id": "palantir_eng_lead_01",
+    "text": "Name: Lauren Park\nHeadline: Engineering Lead — Palantir Foundry Deployments\nLocation: Washington, DC, United States\n\nAbout: I lead teams of FDSEs and customer engineers to deliver high-impact Foundry deployments for public-sector customers. I focus on delivery excellence, data governance, and customer enablement.\n\nExperience:\n• Engineering Lead — Palantir, 2022–Present\n• Forward Deployed Software Engineer — Palantir, 2018–2022\n\nEducation:\n• MIT — BS, Computer Science & Public Policy\n\nSkills: Data Modeling; Delivery Leadership; Stakeholder Management; Onsite Customer Work; Python; SQL."
+  },
+  {
+    "id": "rbc_ta_manager_01",
+    "text": "Name: Stephanie Nguyen\nHeadline: Manager, Talent Acquisition — Technology & Operations, RBC\nLocation: Toronto, Ontario, Canada\n\nAbout: Talent Acquisition leader supporting RBC’s Technology & Operations portfolio. I lead a team of recruiters, partner with senior hiring managers on workforce plans, and drive DEI-focused campus and lateral strategies.\n\nExperience:\n• Manager, Talent Acquisition — RBC, 2023–Present\n• Senior Talent Acquisition Partner — RBC, 2019–2023\n• Recruiter — TD, 2016–2019\n\nEducation:\n• Toronto Metropolitan University — BHRM\n\nSkills: Talent Acquisition Strategy; Tech Recruiting; Campus Programs; DEI Hiring; Stakeholder Management; ATS/CRM."
+  },
+  {
+    "id": "rbc_early_career_lead_01",
+    "text": "Name: Jason Li\nHeadline: Lead, Early Talent & Campus Programs — RBC\nLocation: Toronto, Ontario, Canada\n\nAbout: I design and run early-talent programs (co-op, new grad, rotational) for RBC Technology and Corporate Functions. I work closely with universities, student clubs, and hiring managers to build strong pipelines.\n\nExperience:\n• Lead, Early Talent & Campus — RBC, 2022–Present\n• Campus Recruiter — RBC, 2018–2022\n\nEducation:\n• Queen’s University — BA, Sociology\n\nSkills: Campus Recruitment; Program Design; University Relations; Event Management; Employer Branding; Stakeholder Engagement."
+  },
+  {
+    "id": "kpmg_ta_director_01",
+    "text": "Name: Robert Chan\nHeadline: Director, Talent Attraction — KPMG Canada\nLocation: Toronto, Ontario, Canada\n\nAbout: Director-level TA leader overseeing national graduate, experienced, and advisory hiring for KPMG Canada. I manage TA teams, allocate headcount, and partner with service-line leaders to hit growth targets.\n\nExperience:\n• Director, Talent Attraction — KPMG, 2021–Present\n• Senior Manager, Talent Attraction — KPMG, 2018–2021\n• Recruitment Manager — Financial Services, 2014–2018\n\nEducation:\n• University of Toronto — BA, Industrial Relations\n\nSkills: Talent Strategy; TA Operations; Campus & Experienced Hiring; Employer Brand; Team Leadership; HR Analytics."
+  },
+  {
+    "id": "cibc_vp_data_01",
+    "text": "Name: Ananya Das\nHeadline: Vice President, Data & Analytics — CIBC Retail Banking\nLocation: Toronto, Ontario, Canada\n\nAbout: VP leading CIBC’s data and analytics agenda for retail. I set vision for data platforms, AI/ML use cases, and partner with Technology to deliver scalable solutions.\n\nExperience:\n• VP, Data & Analytics — CIBC, 2023–Present\n• Senior Director, Analytics — CIBC, 2019–2023\n• Director, Customer Insights — BMO, 2015–2019\n\nEducation:\n• Ivey Business School — MBA\n\nSkills: Data Strategy; Analytics Transformation; Banking; Executive Stakeholder Management; People Leadership."
+  },
+  {
+    "id": "td_director_platform_01",
+    "text": "Name: Michael Stevenson\nHeadline: Director, Platform Engineering — TD Bank\nLocation: Toronto, Ontario, Canada (Hybrid)\n\nAbout: Director responsible for TD’s internal developer platforms. I run teams that build CI/CD, container, and observability capabilities for app teams.\n\nExperience:\n• Director, Platform Engineering — TD, 2022–Present\n• Senior Manager, DevOps & Tooling — TD, 2018–2022\n• Manager, Build & Release — Scotiabank, 2014–2018\n\nEducation:\n• University of Waterloo — BASc, Computer Engineering\n\nSkills: Platform Engineering; DevOps; Kubernetes; Budgeting & Vendor Management; Leading Managers."
+  },
+  {
+    "id": "bmo_principal_data_01",
+    "text": "Name: Farah El-Masri\nHeadline: Principal Data Architect — BMO Capital Markets\nLocation: Toronto, Ontario, Canada\n\nAbout: Principal data architect defining data models, governance, and integration patterns for BMO CM. I review designs, guide modernization, and ensure regulatory needs are met.\n\nExperience:\n• Principal Data Architect — BMO, 2021–Present\n• Senior Data Architect — RBC, 2016–2021\n\nEducation:\n• McGill University — BEng, Software Engineering\n\nSkills: Data Modeling; Data Governance; Capital Markets; SQL/ETL; Architecture Reviews; Mentoring."
+  },
+  {
+    "id": "scotia_head_campus_01",
+    "text": "Name: Daniela Rivera\nHeadline: Senior Manager, Campus & Early Talent Acquisition — Scotiabank\nLocation: Toronto, Ontario, Canada\n\nAbout: I lead Scotiabank’s campus recruitment strategy across technology, finance, and global banking. I build strong school relationships, run national events, and ensure a smooth candidate experience.\n\nExperience:\n• Senior Manager, Campus & Early Talent — Scotiabank, 2020–Present\n• Campus Recruitment Lead — Scotiabank, 2016–2020\n\nEducation:\n• York University — BBA, HR\n\nSkills: Campus Programs; Early Talent Strategy; Event Design; DEI; Team Leadership."
+  },
+  {
+    "id": "aws_principal_sa_01",
+    "text": "Name: Jonathan Miller\nHeadline: Principal Solutions Architect — AWS (Financial Services)\nLocation: Toronto, Ontario, Canada\n\nAbout: Principal SA advising Canadian banks on large-scale cloud transformations. I build reference architectures, co-present at events, and mentor other SAs.\n\nExperience:\n• Principal SA — AWS, 2020–Present\n• Senior SA — AWS, 2016–2020\n• Cloud Architect — Deloitte, 2012–2016\n\nEducation:\n• University of British Columbia — BSc, Computer Science\n\nSkills: AWS Well-Architected; Security/Compliance; Landing Zones; Exec Advisory; Public Speaking."
+  },
+  {
+    "id": "google_eng_manager_01",
+    "text": "Name: Sarah Park\nHeadline: Engineering Manager — Google Chrome\nLocation: Toronto, Ontario, Canada\n\nAbout: EM managing browser features and performance teams for Chrome. I focus on delivery, career growth, and cross-timezone collaboration.\n\nExperience:\n• Engineering Manager — Google, 2021–Present\n• Senior Software Engineer — Google, 2016–2021\n• Software Engineer — Shopify, 2013–2016\n\nEducation:\n• University of Toronto — BASc, Computer Engineering\n\nSkills: People Management; Goal Setting; Web Performance; Modern Web; Hiring."
+  },
+  {
+    "id": "meta_eng_manager_01",
+    "text": "Name: Ryan Cole\nHeadline: Engineering Manager — Meta | Reels & Video\nLocation: New York, NY, United States\n\nAbout: I lead teams building video creation and editing experiences. I partner with product and design to ship features fast at scale.\n\nExperience:\n• Engineering Manager — Meta, 2022–Present\n• Senior Software Engineer — Meta, 2018–2022\n• Software Engineer — Microsoft, 2014–2018\n\nEducation:\n• MIT — BS, Computer Science\n\nSkills: People Leadership; Product Engineering; Mobile (iOS/Android); Cross-Functional Collaboration."
+  },
+  {
+    "id": "pwc_partner_candidate_01",
+    "text": "Name: Amanda Li\nHeadline: Director, Deals & Valuations — PwC Canada (Partner Track)\nLocation: Toronto, Ontario, Canada\n\nAbout: Director in PwC’s Deals practice delivering valuations, financial modeling, and transaction support for mid-market and FS clients. Leading teams, managing clients, and building sector knowledge.\n\nExperience:\n• Director, Deals & Valuations — PwC, 2021–Present\n• Senior Manager — PwC, 2018–2021\n• Manager — PwC, 2015–2018\n\nEducation:\n• CPA, CA\n• University of Waterloo — MAcc\n\nSkills: Valuation; Financial Modeling; Client Relationship Management; People Development."
+  },
+  {
+    "id": "deloitte_partner_01",
+    "text": "Name: Matthew O’Reilly\nHeadline: Partner — Deloitte Canada, Risk Advisory\nLocation: Toronto, Ontario, Canada\n\nAbout: Partner leading Risk Advisory for financial-services clients. I help Boards and CROs navigate regulatory change, cyber, and third-party risk.\n\nExperience:\n• Partner — Deloitte, 2019–Present\n• Senior Manager / Director — Deloitte, 2011–2019\n\nEducation:\n• Ivey Business School — HBA\n\nSkills: Risk Advisory; Financial Services; Executive Communication; Practice Growth."
+  },
+  {
+    "id": "startup_president_01",
+    "text": "Name: Karen Dos Santos\nHeadline: President & COO — FinOps Analytics (Toronto)\nLocation: Toronto, Ontario, Canada\n\nAbout: President/COO of a Toronto-based FinOps analytics startup. I run GTM, customer success, and operations while partnering with the CEO on fundraising and product.\n\nExperience:\n• President & COO — FinOps Analytics, 2023–Present\n• VP, Customer Success — Canadian SaaS, 2019–2023\n\nEducation:\n• McGill University — BCom\n\nSkills: GTM Strategy; Customer Success; SaaS Ops; Fundraising Support; People Leadership."
   }
 ]
