@@ -20,15 +20,15 @@ def build_graph(people: list[dict]) -> nx.Graph:
     by_id = {}
     for p in people:
         ep = enrich_person(p)
-        by_id[ep["id"]] = ep
-        G.add_node(ep["id"], **ep)
+        by_id[ep["_id"]] = ep
+        G.add_node(ep["_id"], **ep)
 
     ids = list(by_id.keys())
     for i in range(len(ids)):
         for j in range(i+1, len(ids)):
             a, b = by_id[ids[i]], by_id[ids[j]]
             if should_link(a,b):
-                G.add_edge(a["id"], b["id"],
+                G.add_edge(a["_id"], b["_id"],
                            weight=edge_weight(a,b),
                            signals={
                                "skill_similarity": round(rule_skill_sim(a,b),3),
@@ -40,7 +40,6 @@ def build_graph(people: list[dict]) -> nx.Graph:
     return G
 
 def shortest_paths_ranked(G: nx.Graph, source_id: str, target_id: str, max_hops=6, k=3):
-    import networkx as nx
     if not G.has_node(source_id) or not G.has_node(target_id):
         return []
     if not nx.has_path(G, source_id, target_id):
