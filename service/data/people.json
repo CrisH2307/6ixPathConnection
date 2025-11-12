@@ -42,5 +42,3761 @@
       "API testing"
     ],
     "seniority": "Other"
+  },
+  {
+    "name": "Kristina Z",
+    "company": "(Company)",
+    "role": "(Current Role)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "Communication",
+      "MS Office",
+      "Teamwork",
+      "Problem Solving",
+      "Customer Service"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Ngoc Vien Do",
+    "company": "York University",
+    "role": "Student/Research/Club Roles",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Capital Markets",
+      "Communication",
+      "Data Analysis",
+      "Economics",
+      "Excel",
+      "Financial Analysis",
+      "Quantitative Finance",
+      "Research",
+      "Statistics",
+      "Time Series Concepts",
+      "Python"
+    ],
+    "keywords": [
+      "quantitative finance",
+      "data-driven research",
+      "capital markets",
+      "CFA Level 1",
+      "student clubs"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Andrew Nguyen",
+    "company": "KPMG Canada",
+    "role": "Software Engineer",
+    "schools": [
+      "Seneca College"
+    ],
+    "skills": [
+      "Agile/Scrum",
+      "Communication",
+      "Git/GitHub",
+      "JavaScript",
+      "Node.js",
+      "Problem Solving",
+      "React",
+      "REST APIs",
+      "SQL",
+      "TypeScript"
+    ],
+    "keywords": [
+      "software engineering",
+      "web development",
+      "team collaboration",
+      "clean code",
+      "business applications"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Tanise Lacasse, CPA, CA",
+    "company": "KPMG Canada",
+    "role": "Partner, Canadian Corporate / Asset & Wealth Management Tax",
+    "schools": [
+      "University of Calgary"
+    ],
+    "skills": [
+      "Corporate Tax",
+      "Canadian Tax",
+      "Accounting",
+      "Financial Reporting",
+      "IFRS",
+      "Asset & Wealth Management",
+      "Client Advisory",
+      "Leadership",
+      "Stakeholder Management",
+      "Team Development"
+    ],
+    "keywords": [
+      "corporate tax",
+      "asset management",
+      "wealth management",
+      "compliance",
+      "client relationships"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Iryna Sychova",
+    "company": "KPMG Canada",
+    "role": "Finance/Accounting",
+    "schools": [
+      "George Brown College"
+    ],
+    "skills": [
+      "Accounting",
+      "Financial Reporting",
+      "Excel",
+      "Organizational Skills",
+      "Communication",
+      "Teamwork"
+    ],
+    "keywords": [
+      "finance",
+      "accounting",
+      "professional services",
+      "KPMG",
+      "team coordination"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Minh Duc Hoang",
+    "company": "Google",
+    "role": "Software Engineer",
+    "schools": [
+      "University of Pennsylvania"
+    ],
+    "skills": [
+      "Software Engineering",
+      "Algorithms",
+      "Data Structures",
+      "Python",
+      "Java",
+      "Systems Design",
+      "Code Review",
+      "Collaboration"
+    ],
+    "keywords": [
+      "algorithms",
+      "systems design",
+      "software engineering",
+      "high-quality engineering",
+      "large-scale systems"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Jaden Giang Dang",
+    "company": "KPMG Canada",
+    "role": "Consultant / Analyst",
+    "schools": [],
+    "skills": [
+      "Business Analysis",
+      "Excel",
+      "Management Consulting",
+      "PowerPoint",
+      "Research",
+      "Stakeholder Communication",
+      "Teamwork"
+    ],
+    "keywords": [
+      "consulting",
+      "strategy",
+      "operations",
+      "financial analysis",
+      "business impact"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Anh Tran",
+    "company": "IBM",
+    "role": "Senior Consultant",
+    "schools": [
+      "Georgia Institute of Technology"
+    ],
+    "skills": [
+      "Consulting",
+      "Business Analysis",
+      "Solution Delivery",
+      "Stakeholder Management",
+      "Data/Tech Tools",
+      "Communication"
+    ],
+    "keywords": [
+      "consulting",
+      "stakeholder management",
+      "solution design",
+      "enterprise solutions",
+      "business analysis"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Linh Nguyen",
+    "company": "(Company)",
+    "role": "(fill from LinkedIn — e.g. Analyst / Coordinator / Student)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Organization"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Khoi Vu",
+    "company": "RBC",
+    "role": "Full-stack Developer",
+    "schools": [
+      "University/College in Canada"
+    ],
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "SQL",
+      "Git",
+      "CI/CD",
+      "Competitive Programming"
+    ],
+    "keywords": [
+      "full-stack development",
+      "competitive programming",
+      "application development",
+      "DevOps",
+      "software engineering"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Aryan K.",
+    "company": "(Company)",
+    "role": "Intern",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "Problem Solving",
+      "Teamwork",
+      "Communication",
+      "MS Office"
+    ],
+    "keywords": [
+      "software",
+      "data",
+      "finance"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Daisy Le",
+    "company": "(Company)",
+    "role": "(fill from LinkedIn — e.g. Business/Accounting/Student Role)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "Communication",
+      "Customer Service",
+      "Organization",
+      "MS Office",
+      "Teamwork"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Angel Shinh",
+    "company": "RBC",
+    "role": "Technical Systems Analyst",
+    "schools": [],
+    "skills": [
+      "C++",
+      "Python",
+      "JavaScript",
+      "Full-Stack Development",
+      "UI/UX",
+      "Teaching",
+      "Systems Analysis",
+      "Git",
+      "Team Collaboration"
+    ],
+    "keywords": [
+      "machine learning",
+      "full-stack",
+      "software development",
+      "education",
+      "engineering"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Jay Vakil",
+    "company": "todayistheday",
+    "role": "Founder",
+    "schools": [
+      "Seneca College"
+    ],
+    "skills": [
+      "Accounting",
+      "Stakeholder Engagement",
+      "Content Building",
+      "Community Building",
+      "Excel",
+      "Communication",
+      "Public Sector Exposure"
+    ],
+    "keywords": [
+      "accounting",
+      "tech",
+      "professional services",
+      "content creation",
+      "community engagement"
+    ],
+    "seniority": "Founder"
+  },
+  {
+    "name": "Thanh (Ph) Tran",
+    "company": "(Company)",
+    "role": "(fill from LinkedIn)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Problem Solving"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Judy (Heeju) Choi",
+    "company": "KPMG Canada",
+    "role": "Talent Attraction Manager, Campus Recruitment",
+    "schools": [
+      "University of Toronto Scarborough"
+    ],
+    "skills": [
+      "Campus Recruitment",
+      "Talent Acquisition",
+      "Employer Branding",
+      "Event Planning",
+      "Candidate Screening",
+      "Stakeholder Management"
+    ],
+    "keywords": [
+      "recruitment",
+      "talent management",
+      "event planning",
+      "stakeholder engagement",
+      "campus recruitment"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "A. K. Tyagi",
+    "company": "(Company)",
+    "role": "(fill from LinkedIn — could be engineering/QA/IT/procurement depending on real profile)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "Project Coordination",
+      "Communication",
+      "MS Office"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Tung Lam Le",
+    "company": "",
+    "role": "Student / Early-career",
+    "schools": [
+      "College/University"
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "MS Office",
+      "Teamwork",
+      "Communication"
+    ],
+    "keywords": [],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Nadimul Hasan",
+    "company": "Bell",
+    "role": "Software Developer",
+    "schools": [
+      "Canadian university/college"
+    ],
+    "skills": [
+      "Java",
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Problem Solving",
+      "Team Collaboration"
+    ],
+    "keywords": [
+      "software development",
+      "telecom",
+      "backend services",
+      "production features",
+      "collaboration"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Linh An",
+    "company": "(Company)",
+    "role": "(fill from LinkedIn — e.g. Marketing/Finance/Student)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "Communication",
+      "MS Office",
+      "Organization",
+      "Teamwork"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Vladyslav Huziienko",
+    "company": "Autodesk",
+    "role": "Software Developer Intern",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "REST APIs",
+      "Git",
+      "Frontend Development",
+      "Web Applications",
+      "Problem Solving",
+      "Team Collaboration"
+    ],
+    "keywords": [
+      "software development",
+      "web technologies",
+      "frontend development",
+      "collaboration",
+      "co-op pathways"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Emilia Hoang",
+    "company": "RBC",
+    "role": "Data and Reporting Analyst",
+    "schools": [
+      "Computer Studies & Information Systems"
+    ],
+    "skills": [
+      "Data Analysis",
+      "Reporting",
+      "SQL",
+      "Excel",
+      "Business Intelligence",
+      "Data Visualization",
+      "Stakeholder Communication"
+    ],
+    "keywords": [
+      "data analysis",
+      "reporting",
+      "finance",
+      "business intelligence",
+      "stakeholder engagement"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Mike Elavia",
+    "company": "AWS Canada",
+    "role": "Head of Talent Acquisition",
+    "schools": [],
+    "skills": [
+      "Leadership",
+      "Recruiting Strategy",
+      "Stakeholder Management",
+      "Talent Acquisition",
+      "Tech Hiring"
+    ],
+    "keywords": [
+      "recruiting",
+      "talent acquisition",
+      "leadership",
+      "technical talent",
+      "team management"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "David (Dave) Dininio",
+    "company": "Capital One Canada",
+    "role": "Talent Acquisition Leader",
+    "schools": [
+      "Sheridan College"
+    ],
+    "skills": [
+      "Talent Acquisition",
+      "Campus/Early Talent",
+      "Recruiting Operations",
+      "Stakeholder Engagement",
+      "Data-Driven Hiring"
+    ],
+    "keywords": [
+      "talent acquisition",
+      "recruiting",
+      "hiring processes",
+      "team leadership",
+      "data-driven"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Yelin Lee",
+    "company": "Amazon",
+    "role": "University Talent Acquisition",
+    "schools": [
+      "Canadian university/college"
+    ],
+    "skills": [
+      "Candidate Screening",
+      "Event Coordination",
+      "Stakeholder Management",
+      "Talent Acquisition",
+      "University Recruiting"
+    ],
+    "keywords": [
+      "talent acquisition",
+      "university recruiting",
+      "people operations",
+      "early career",
+      "candidate experience"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Aarthi Thota",
+    "company": "Amazon",
+    "role": "Recruiter",
+    "schools": [],
+    "skills": [
+      "Talent Acquisition",
+      "Campus Recruiting",
+      "Candidate Experience",
+      "Stakeholder Communication"
+    ],
+    "keywords": [
+      "recruitment",
+      "university recruiting",
+      "talent acquisition",
+      "candidate experience",
+      "stakeholder communication"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "John Daniel",
+    "company": "",
+    "role": "",
+    "schools": [],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Problem Solving"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Samiksha Bhasin",
+    "company": "Autodesk",
+    "role": "Program / Business Professional",
+    "schools": [
+      "ICFAI Business School"
+    ],
+    "skills": [
+      "Business Analysis",
+      "Communication",
+      "MS Office",
+      "Program Coordination",
+      "Stakeholder Management"
+    ],
+    "keywords": [
+      "business",
+      "program management",
+      "stakeholder communication",
+      "coordination",
+      "MBA"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Pavlo Davydov",
+    "company": "Autodesk",
+    "role": "Senior Software Engineer",
+    "schools": [
+      "Zaporizhzhia National University"
+    ],
+    "skills": [
+      "Software Development",
+      "Web",
+      "Backend",
+      "Testing",
+      "Team Collaboration",
+      "Problem Solving"
+    ],
+    "keywords": [
+      "software engineering",
+      "production systems",
+      "feature development",
+      "code maintenance",
+      "cross-functional collaboration"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Denys Dziubii",
+    "company": "Autodesk",
+    "role": "Software Engineer",
+    "schools": [
+      "Simon Fraser University"
+    ],
+    "skills": [
+      "Agile",
+      "Communication",
+      "Git",
+      "Problem Solving",
+      "Software Engineering",
+      "Web Development"
+    ],
+    "keywords": [
+      "software development",
+      "Agile",
+      "reliable software",
+      "collaboration",
+      "computer science"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Ivan Martysh",
+    "company": "Autodesk",
+    "role": "Software Engineering Manager",
+    "schools": [
+      "Taras Shevchenko National University of Kyiv"
+    ],
+    "skills": [
+      "Engineering Management",
+      "Software Architecture",
+      "AWS",
+      "Cloud",
+      "Team Leadership",
+      "AI",
+      "Automation Awareness"
+    ],
+    "keywords": [
+      "AI",
+      "AWS",
+      "engineering productivity",
+      "tooling",
+      "software engineering"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Thanh (Ph) Tran",
+    "company": "Company",
+    "role": "Other",
+    "schools": [
+      "School name"
+    ],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Problem Solving"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "John Daniel",
+    "company": "Company",
+    "role": "Current Role",
+    "schools": [
+      "School name"
+    ],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Problem Solving"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Tanise Lacasse, CPA, CA",
+    "company": "KPMG Canada",
+    "role": "Partner",
+    "schools": [
+      "University of Calgary"
+    ],
+    "skills": [
+      "Corporate Tax",
+      "Canadian Tax",
+      "Accounting",
+      "Financial Reporting",
+      "IFRS",
+      "Asset & Wealth Management",
+      "Client Advisory",
+      "Leadership",
+      "Stakeholder Management",
+      "Team Development"
+    ],
+    "keywords": [
+      "corporate tax",
+      "asset management",
+      "wealth management",
+      "compliance",
+      "client relationships"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "David (Dave) Dininio",
+    "company": "Capital One",
+    "role": "Talent Acquisition Leader",
+    "schools": [
+      "Sheridan College"
+    ],
+    "skills": [
+      "Talent Acquisition",
+      "Campus/Early Talent",
+      "Recruiting Operations",
+      "Stakeholder Engagement",
+      "Data-Driven Hiring"
+    ],
+    "keywords": [
+      "talent acquisition",
+      "recruiting",
+      "hiring processes",
+      "team leadership",
+      "data-driven"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "John Daniel",
+    "company": "Company",
+    "role": "Other",
+    "schools": [
+      "School name"
+    ],
+    "skills": [
+      "Communication",
+      "MS Office",
+      "Problem Solving",
+      "Teamwork"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Thanh (Ph) Tran",
+    "company": "",
+    "role": "",
+    "schools": [],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Problem Solving"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Tung Lam Le",
+    "company": "",
+    "role": "Student/Intern",
+    "schools": [
+      "College/University"
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "MS Office",
+      "Teamwork",
+      "Communication"
+    ],
+    "keywords": [],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Linh An",
+    "company": "Current Role",
+    "role": "Other",
+    "schools": [],
+    "skills": [
+      "Communication",
+      "MS Office",
+      "Organization",
+      "Teamwork"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Kex (Yiming) Zhang",
+    "company": "University of Toronto",
+    "role": "Graduate Student",
+    "schools": [
+      "University of Toronto",
+      "McMaster University"
+    ],
+    "skills": [
+      "Communication",
+      "Data Analysis",
+      "Information Architecture",
+      "Prototyping",
+      "Statistics",
+      "Team Collaboration",
+      "User-Centered Design",
+      "UX Research"
+    ],
+    "keywords": [
+      "information systems",
+      "user-centered design",
+      "analytical thinking",
+      "product design",
+      "UX problems"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Gurmehak Kaur Uppal",
+    "company": "RBC",
+    "role": "Software Developer & Quality Engineering",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Software Development",
+      "Test Automation",
+      "Quality Assurance",
+      "JavaScript",
+      "Python",
+      "Problem Solving",
+      "Communication",
+      "Collaboration"
+    ],
+    "keywords": [
+      "software engineering",
+      "quality engineering",
+      "application development",
+      "test automation",
+      "collaborative teams"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Yukti Mulani",
+    "company": "RBC",
+    "role": "Middleware Support and Developer",
+    "schools": [],
+    "skills": [
+      "Application Support",
+      "Communication",
+      "Documentation",
+      "Middleware Development",
+      "REST/HTTP basics",
+      "Teamwork"
+    ],
+    "keywords": [
+      "middleware",
+      "integration",
+      "candidate experience",
+      "reliable services",
+      "internal processes"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Asal S.",
+    "company": "RBC T&O",
+    "role": "Technical Systems Analyst",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Systems Analysis",
+      "Technical Documentation",
+      "Stakeholder Communication",
+      "SDLC Basics",
+      "Troubleshooting",
+      "Team Collaboration"
+    ],
+    "keywords": [
+      "technical analysis",
+      "systems documentation",
+      "stakeholder engagement",
+      "IT processes",
+      "peer mentoring"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Krins Vaghasia",
+    "company": "RBC",
+    "role": "Software Developer",
+    "schools": [],
+    "skills": [
+      "Agile",
+      "Git",
+      "GitHub",
+      "JavaScript",
+      "Problem Solving",
+      "React",
+      "REST APIs",
+      "Teamwork",
+      "TypeScript"
+    ],
+    "keywords": [
+      "software development",
+      "hackathons",
+      "web development",
+      "service stacks",
+      "collaboration"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Christie Tang",
+    "company": "RBC",
+    "role": "Developer Intern",
+    "schools": [
+      "York University, Lassonde School of Engineering"
+    ],
+    "skills": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "Web Development",
+      "Git",
+      "Problem Solving",
+      "Communication"
+    ],
+    "keywords": [
+      "full-stack development",
+      "financial services",
+      "student tech communities",
+      "problem solving",
+      "building products"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Tue Nguyen",
+    "company": "Company from LinkedIn",
+    "role": "Software Developer",
+    "schools": [
+      "School from LinkedIn"
+    ],
+    "skills": [
+      "Docker",
+      "Express",
+      "Git",
+      "Microservices",
+      "Next.js",
+      "Node.js",
+      "Redis",
+      "REST APIs",
+      "Team Collaboration"
+    ],
+    "keywords": [
+      "microservices",
+      "Next.js",
+      "Express",
+      "Redis",
+      "Docker"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Natalie Vu",
+    "company": "(Company)",
+    "role": "(Current Role)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Organization"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Anthony Lam",
+    "company": "McGregor Allsop Limited",
+    "role": "Database Developer",
+    "schools": [],
+    "skills": [
+      "SQL",
+      "Database Design",
+      "Performance Optimization",
+      "Reporting",
+      "Data Analysis",
+      "Collaboration"
+    ],
+    "keywords": [
+      "database",
+      "SQL",
+      "performance",
+      "data integrity",
+      "reporting"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "James Liang",
+    "company": "York University",
+    "role": "BBA Candidate",
+    "schools": [
+      "York University",
+      "Schulich School of Business"
+    ],
+    "skills": [
+      "Product Coordination",
+      "Project Coordination",
+      "Pitching",
+      "Presentation",
+      "Hackathon Prototyping",
+      "Teamwork",
+      "Excel",
+      "Communication",
+      "Community Building"
+    ],
+    "keywords": [
+      "hackathon",
+      "prototyping",
+      "event management",
+      "team collaboration",
+      "business skills"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Rob Jessop",
+    "company": "Canadian organization",
+    "role": "Senior Recruiter / Talent Attraction Leader",
+    "schools": [],
+    "skills": [
+      "Talent Acquisition",
+      "Candidate Sourcing",
+      "Employer Branding",
+      "Stakeholder Management",
+      "Interviewing",
+      "Campus/Early Talent"
+    ],
+    "keywords": [
+      "recruitment",
+      "talent acquisition",
+      "candidate experience",
+      "employer brand",
+      "hiring strategies"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Cris Huynh",
+    "company": "KPMG Canada",
+    "role": "Software Developer",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "JavaScript",
+      "Python",
+      "Web Development",
+      "Algorithms",
+      "Data Structures",
+      "Git",
+      "GitHub",
+      "Problem Solving",
+      "Hackathon Prototyping",
+      "Communication",
+      "Team Collaboration",
+      "DevOps"
+    ],
+    "keywords": [
+      "software development",
+      "hackathons",
+      "AI",
+      "ML",
+      "cloud tooling"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Maksym Volkovynskyi",
+    "company": "Brand Glow Up",
+    "role": "Full-stack Software Developer",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "Git",
+      "GitHub",
+      "Responsive Design",
+      "Debugging",
+      "Teamwork"
+    ],
+    "keywords": [
+      "full-stack development",
+      "web solutions",
+      "frontend",
+      "backend",
+      "software development"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Sean Muniz",
+    "company": "Canadian Armed Forces",
+    "role": "Software Quality Assurance",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Software Testing",
+      "QA Documentation",
+      "Test Case Design",
+      "SDLC Basics",
+      "Teamwork",
+      "Attention to Detail",
+      "Communication"
+    ],
+    "keywords": [
+      "quality assurance",
+      "software testing",
+      "reliability",
+      "testing practices",
+      "production systems"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Sukhman Hara",
+    "company": "AI-focused HR Startup (Stealth)",
+    "role": "UI/UX Designer & Developer Intern",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "UI/UX Design",
+      "Figma",
+      "Prototyping",
+      "Frontend Development",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Design",
+      "Problem Solving",
+      "Communication",
+      "Team Collaboration"
+    ],
+    "keywords": [
+      "UI/UX",
+      "frontend",
+      "web development",
+      "AI",
+      "HR",
+      "tech",
+      "design",
+      "prototyping",
+      "collaboration",
+      "student"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Binh Duong N.",
+    "company": "BMO",
+    "role": "Junior Mainframe",
+    "schools": [
+      "Conestoga College"
+    ],
+    "skills": [
+      "Mainframe Fundamentals",
+      "COBOL",
+      "JCL",
+      "SQL",
+      "Problem Solving",
+      "Documentation",
+      "Teamwork"
+    ],
+    "keywords": [
+      "infrastructure",
+      "legacy systems",
+      "core banking",
+      "software roles",
+      "tech community"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Phuong Linh Do",
+    "company": "Canadian college/university",
+    "role": "Marketing Student",
+    "schools": [
+      "Canadian college/university"
+    ],
+    "skills": [
+      "Digital Marketing",
+      "Content Creation",
+      "Social Media",
+      "Canva",
+      "Branding",
+      "Communication",
+      "Organization"
+    ],
+    "keywords": [
+      "branding",
+      "digital marketing",
+      "visual storytelling",
+      "content creation",
+      "social media"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Leilah Do",
+    "company": "Seneca Polytechnic",
+    "role": "Marketing Student",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Canva",
+      "Communication",
+      "Digital Marketing",
+      "Event Planning",
+      "Social Media Content",
+      "Stakeholder Coordination",
+      "Teamwork"
+    ],
+    "keywords": [
+      "branding",
+      "digital marketing",
+      "event planning",
+      "entrepreneurship",
+      "student initiatives"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Sophia Tran",
+    "company": "RBC Capital Markets",
+    "role": "Software Developer",
+    "schools": [
+      "Toronto Metropolitan University"
+    ],
+    "skills": [
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "Spring Boot",
+      "REST APIs",
+      "Git",
+      "GitHub",
+      "CI/CD",
+      "Jest",
+      "Agile",
+      "Scrum"
+    ],
+    "keywords": [
+      "software development",
+      "client-facing applications",
+      "React",
+      "Java",
+      "Spring",
+      "CI/CD",
+      "code quality",
+      "unit testing",
+      "Agile",
+      "Scrum"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Daniel Cho",
+    "company": "Scotiabank",
+    "role": "Data Analyst",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "SQL",
+      "Power BI",
+      "Excel",
+      "Data Cleaning",
+      "Reporting",
+      "Stakeholder Communication"
+    ],
+    "keywords": [
+      "data analysis",
+      "wealth management",
+      "reporting pipelines",
+      "dashboards",
+      "data cleaning"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Maya Khan",
+    "company": "TD Bank",
+    "role": "Cloud Engineer",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "Azure",
+      "Terraform",
+      "CI/CD",
+      "Linux",
+      "Python",
+      "Bash",
+      "Monitoring",
+      "Networking"
+    ],
+    "keywords": [
+      "cloud engineering",
+      "Azure",
+      "Terraform",
+      "DevOps",
+      "IaC"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Liam Barker",
+    "company": "BMO Capital Markets",
+    "role": "Quantitative Analyst",
+    "schools": [
+      "University of Toronto",
+      "Western University"
+    ],
+    "skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Stochastic Calculus",
+      "Derivatives Pricing",
+      "VaR",
+      "SQL"
+    ],
+    "keywords": [
+      "quantitative analysis",
+      "risk management",
+      "derivatives",
+      "financial mathematics",
+      "analytics"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Amelia Nguyen",
+    "company": "CIBC",
+    "role": "Product Manager",
+    "schools": [
+      "McGill University"
+    ],
+    "skills": [
+      "Product Management",
+      "Jira",
+      "User Stories",
+      "A/B Testing",
+      "Stakeholder Management",
+      "Agile"
+    ],
+    "keywords": [
+      "digital banking",
+      "product development",
+      "mobile",
+      "web",
+      "feature delivery"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Ethan Wu",
+    "company": "Google",
+    "role": "Software Engineer",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "C++",
+      "Java",
+      "Distributed Systems",
+      "gRPC",
+      "Linux",
+      "Design Docs",
+      "Code Review"
+    ],
+    "keywords": [
+      "backend systems",
+      "performance",
+      "reliability",
+      "high-availability services",
+      "Search"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Natalia Silva",
+    "company": "Meta",
+    "role": "Frontend Engineer",
+    "schools": [
+      "University of Toronto"
+    ],
+    "skills": [
+      "React",
+      "React Native",
+      "TypeScript",
+      "GraphQL",
+      "A/B Testing",
+      "Accessibility",
+      "Performance Tuning"
+    ],
+    "keywords": [
+      "frontend",
+      "engineering",
+      "user-facing features",
+      "React",
+      "Instagram"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Omar Ashraf",
+    "company": "Amazon",
+    "role": "SDE II",
+    "schools": [
+      "UBC"
+    ],
+    "skills": [
+      "AWS",
+      "DynamoDB",
+      "Java",
+      "Kotlin",
+      "Microservices",
+      "Observability",
+      "SQS"
+    ],
+    "keywords": [
+      "payments",
+      "high-scale services",
+      "backend engineering",
+      "reliability",
+      "observability"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Harper Liu",
+    "company": "AWS",
+    "role": "Solutions Architect",
+    "schools": [
+      "Queen’s University"
+    ],
+    "skills": [
+      "AWS",
+      "Security",
+      "VPC Design",
+      "Infrastructure as Code",
+      "Client Workshops",
+      "Writing"
+    ],
+    "keywords": [
+      "cloud architecture",
+      "financial services",
+      "AWS",
+      "migrations",
+      "workshops"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Sofia Reed",
+    "company": "Uber",
+    "role": "Data Scientist",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "Experimentation",
+      "Causal Inference",
+      "Feature Engineering",
+      "Dashboards"
+    ],
+    "keywords": [
+      "data science",
+      "pricing",
+      "experimentation",
+      "modeling",
+      "analytics"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Mateo Rivera",
+    "company": "Palantir",
+    "role": "Forward Deployed Software Engineer",
+    "schools": [
+      "MIT"
+    ],
+    "skills": [
+      "Python",
+      "Java",
+      "Data Modeling",
+      "Customer Discovery",
+      "Rapid Prototyping",
+      "Security/Access Controls"
+    ],
+    "keywords": [
+      "data pipelines",
+      "product development",
+      "government",
+      "software engineering",
+      "Palantir Foundry"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Linh Vo",
+    "company": "Snowflake",
+    "role": "Sales Engineer",
+    "schools": [
+      "University of Ottawa"
+    ],
+    "skills": [
+      "SQL",
+      "Data Warehousing",
+      "Snowflake",
+      "ETL",
+      "Python",
+      "Customer Demos"
+    ],
+    "keywords": [
+      "data stack",
+      "modernization",
+      "demos",
+      "POCs",
+      "account executives"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Alyssa Cheng",
+    "company": "Deloitte",
+    "role": "Consultant",
+    "schools": [
+      "Western University"
+    ],
+    "skills": [
+      "Agile",
+      "Azure",
+      "Cloud",
+      "Consulting",
+      "Requirements",
+      "Stakeholder Management"
+    ],
+    "keywords": [
+      "cloud",
+      "integration",
+      "financial services",
+      "consulting",
+      "technology"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Jonathan Park",
+    "company": "PwC",
+    "role": "Senior Associate",
+    "schools": [
+      "University of Toronto"
+    ],
+    "skills": [
+      "Audit",
+      "Client Communication",
+      "Excel",
+      "IFRS",
+      "ASPE"
+    ],
+    "keywords": [
+      "audits",
+      "financial services",
+      "insurance",
+      "CPA"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Amira Hassan",
+    "company": "EY",
+    "role": "Senior Consultant",
+    "schools": [
+      "Toronto Metropolitan University"
+    ],
+    "skills": [
+      "Client Management",
+      "ITGC",
+      "Risk Assessments",
+      "SOC Reports"
+    ],
+    "keywords": [
+      "cyber risk",
+      "ITGC testing",
+      "compliance",
+      "technology risk",
+      "consulting"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Marco Ferraro",
+    "company": "KPMG",
+    "role": "Senior Data Engineer",
+    "schools": [
+      "University of Guelph"
+    ],
+    "skills": [
+      "Python",
+      "PySpark",
+      "SQL",
+      "Azure Data Factory",
+      "Databricks",
+      "BI"
+    ],
+    "keywords": [
+      "data platforms",
+      "analytics solutions",
+      "data engineering",
+      "KPMG",
+      "cloud computing"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Noah Banks",
+    "company": "CIBC",
+    "role": "Site Reliability Engineer",
+    "schools": [
+      "Seneca College"
+    ],
+    "skills": [
+      "Kubernetes",
+      "Docker",
+      "Grafana",
+      "Prometheus",
+      "CI/CD",
+      "Python",
+      "Incident Response"
+    ],
+    "keywords": [
+      "site reliability",
+      "digital banking",
+      "automation",
+      "monitoring",
+      "on-call"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Selena Wong",
+    "company": "RBC",
+    "role": "Campus Talent Acquisition Partner",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Talent Acquisition",
+      "Campus Recruiting",
+      "Interviewing",
+      "Employer Branding",
+      "Event Planning"
+    ],
+    "keywords": [
+      "recruitment",
+      "students",
+      "new grads",
+      "info sessions",
+      "hiring managers"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Devon Miles",
+    "company": "BMO",
+    "role": "Frontend Engineer",
+    "schools": [
+      "Sheridan College"
+    ],
+    "skills": [
+      "Accessibility",
+      "Design Systems",
+      "Figma-to-code",
+      "Jest",
+      "React",
+      "TypeScript"
+    ],
+    "keywords": [
+      "frontend",
+      "UI",
+      "digital banking",
+      "accessible design",
+      "reusable components"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Jessica Lam",
+    "company": "RBC",
+    "role": "Frontend Developer",
+    "schools": [
+      "Toronto Metropolitan University"
+    ],
+    "skills": [
+      "Accessibility",
+      "Agile",
+      "Git",
+      "Jest",
+      "React",
+      "Redux",
+      "REST APIs",
+      "TypeScript"
+    ],
+    "keywords": [
+      "frontend development",
+      "digital banking",
+      "responsive design",
+      "accessible experiences",
+      "design systems"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Ahmed Khan",
+    "company": "RBC Capital Markets",
+    "role": "Backend Engineer",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "CI/CD",
+      "Docker",
+      "Java",
+      "Kafka",
+      "REST",
+      "SQL",
+      "Spring Boot"
+    ],
+    "keywords": [
+      "backend",
+      "engineering",
+      "trading",
+      "reporting",
+      "services"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Emily Wong",
+    "company": "RBC",
+    "role": "Data Scientist",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "SQL",
+      "Feature Engineering",
+      "Dashboarding"
+    ],
+    "keywords": [
+      "data science",
+      "customer behaviour",
+      "modeling",
+      "churn",
+      "segmentation"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Ryan Patel",
+    "company": "RBC",
+    "role": "Campus Talent Acquisition Partner",
+    "schools": [
+      "University of Guelph"
+    ],
+    "skills": [
+      "Talent Acquisition",
+      "Campus Recruiting",
+      "Employer Branding",
+      "ATS",
+      "Event Planning"
+    ],
+    "keywords": [
+      "recruitment",
+      "talent acquisition",
+      "campus recruiting",
+      "HR",
+      "employer branding"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Hannah McLeod",
+    "company": "RBC Ventures",
+    "role": "Product Manager",
+    "schools": [
+      "Queen’s University"
+    ],
+    "skills": [
+      "A/B Testing",
+      "Analytics",
+      "Product Discovery",
+      "Roadmapping",
+      "Stakeholder Management"
+    ],
+    "keywords": [
+      "product management",
+      "consumer apps",
+      "experimentation",
+      "design collaboration",
+      "engineering"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Carlos Martinez",
+    "company": "Scotiabank",
+    "role": "Software Developer",
+    "schools": [
+      "University of Toronto"
+    ],
+    "skills": [
+      "Python",
+      "Flask",
+      "React",
+      "SQL",
+      "Git",
+      "Jira"
+    ],
+    "keywords": [
+      "software development",
+      "internal tools",
+      "trading",
+      "risk management",
+      "Python",
+      "React"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Olivia Park",
+    "company": "Scotiabank",
+    "role": "Senior Data Analyst",
+    "schools": [
+      "TMU"
+    ],
+    "skills": [
+      "SQL",
+      "Power BI",
+      "Excel",
+      "Storytelling",
+      "Requirements Gathering"
+    ],
+    "keywords": [
+      "data analysis",
+      "customer insights",
+      "dashboards",
+      "business intelligence",
+      "data visualization"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Arjun Singh",
+    "company": "TD",
+    "role": "Site Reliability Engineer",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Kubernetes",
+      "Docker",
+      "Prometheus",
+      "Grafana",
+      "Bash",
+      "Python",
+      "CI/CD"
+    ],
+    "keywords": [
+      "reliability",
+      "automation",
+      "runbooks",
+      "alerts",
+      "observability"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Grace Kim",
+    "company": "TD",
+    "role": "UI Engineer",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "HTML",
+      "CSS",
+      "React",
+      "Accessibility",
+      "Figma-to-Code"
+    ],
+    "keywords": [
+      "UI",
+      "UX",
+      "web development",
+      "accessibility",
+      "performance"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Michael Roberts",
+    "company": "BMO",
+    "role": "Risk Analyst",
+    "schools": [
+      "Western University"
+    ],
+    "skills": [
+      "Excel",
+      "VBA",
+      "SQL",
+      "Risk Reporting",
+      "Communication"
+    ],
+    "keywords": [
+      "risk analysis",
+      "credit risk",
+      "market risk",
+      "financial reporting",
+      "data analysis"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Priya Nair",
+    "company": "BMO",
+    "role": "Data Engineer",
+    "schools": [
+      "University of Ottawa"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "Airflow",
+      "DBT",
+      "Azure"
+    ],
+    "keywords": [
+      "data pipelines",
+      "analytics",
+      "ETL",
+      "cloud",
+      "data engineering"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Daniel Green",
+    "company": "CIBC",
+    "role": "iOS Developer",
+    "schools": [
+      "Sheridan College"
+    ],
+    "skills": [
+      "Swift",
+      "SwiftUI",
+      "REST",
+      "Unit Testing",
+      "CI"
+    ],
+    "keywords": [
+      "mobile development",
+      "iOS",
+      "banking",
+      "software engineering",
+      "app development"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Sarah Ali",
+    "company": "CIBC",
+    "role": "Business Analyst",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Requirements",
+      "User Stories",
+      "JIRA",
+      "SQL",
+      "Communication"
+    ],
+    "keywords": [
+      "business analysis",
+      "requirements gathering",
+      "tech teams",
+      "communication",
+      "user stories"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Jason Lee",
+    "company": "Google",
+    "role": "Software Engineer",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "C++",
+      "Go",
+      "Distributed Systems",
+      "Networking",
+      "SRE Practices"
+    ],
+    "keywords": [
+      "GCP",
+      "networking",
+      "scalability",
+      "reliability",
+      "latency"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Dr. Alice Chen",
+    "company": "Google DeepMind",
+    "role": "Research Scientist",
+    "schools": [
+      "University of Toronto"
+    ],
+    "skills": [
+      "ML Research",
+      "Optimization",
+      "Paper Writing",
+      "PyTorch"
+    ],
+    "keywords": [
+      "representation learning",
+      "model efficiency",
+      "machine learning",
+      "research",
+      "artificial intelligence"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Marcus Brown",
+    "company": "Meta",
+    "role": "Backend Engineer",
+    "schools": [
+      "Georgia Tech"
+    ],
+    "skills": [
+      "PHP",
+      "Python",
+      "Thrift",
+      "Distributed Systems",
+      "Oncall"
+    ],
+    "keywords": [
+      "APIs",
+      "messaging",
+      "backend",
+      "software engineering",
+      "services"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Jing Zhao",
+    "company": "Meta",
+    "role": "Data Scientist",
+    "schools": [
+      "Columbia University"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "Experimentation",
+      "Causal Inference",
+      "Dashboards"
+    ],
+    "keywords": [
+      "data science",
+      "experimentation",
+      "impact measurement",
+      "growth",
+      "analytics"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Carlos Silva",
+    "company": "Amazon",
+    "role": "SDE I",
+    "schools": [
+      "UBC"
+    ],
+    "skills": [
+      "AWS",
+      "DynamoDB",
+      "Java",
+      "Lambda",
+      "Testing"
+    ],
+    "keywords": [
+      "fulfillment",
+      "backend services",
+      "optimization",
+      "cloud computing",
+      "software development"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Melissa Gordon",
+    "company": "AWS",
+    "role": "Solutions Architect",
+    "schools": [
+      "McMaster University"
+    ],
+    "skills": [
+      "AWS",
+      "Security",
+      "Well-Architected",
+      "Presentations"
+    ],
+    "keywords": [
+      "cloud computing",
+      "financial services",
+      "AWS",
+      "solutions architecture",
+      "modernization"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Aria Patel",
+    "company": "Uber",
+    "role": "Frontend Engineer",
+    "schools": [
+      "TMU"
+    ],
+    "skills": [
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Testing",
+      "Performance"
+    ],
+    "keywords": [
+      "frontend",
+      "engineering",
+      "merchant tools",
+      "Uber Eats",
+      "software development"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Robert King",
+    "company": "Palantir",
+    "role": "Forward Deployed Engineer",
+    "schools": [
+      "UCLA"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "Data Modeling",
+      "Customer Discovery",
+      "Rapid Prototyping"
+    ],
+    "keywords": [
+      "integration",
+      "data workflows",
+      "public sector",
+      "customer data",
+      "Palantir products"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Irene Park",
+    "company": "Snowflake",
+    "role": "Senior Data Engineer",
+    "schools": [
+      "University of Calgary"
+    ],
+    "skills": [
+      "DBT",
+      "ETL",
+      "Python",
+      "SQL",
+      "Snowflake"
+    ],
+    "keywords": [
+      "data engineering",
+      "cloud computing",
+      "data modeling",
+      "performance optimization",
+      "Snowflake implementation"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Kevin Wu",
+    "company": "Deloitte",
+    "role": "Consultant",
+    "schools": [
+      "University of Toronto"
+    ],
+    "skills": [
+      "Consulting",
+      "SQL",
+      "Power BI",
+      "Azure",
+      "Stakeholder Management"
+    ],
+    "keywords": [
+      "cloud",
+      "analytics",
+      "data",
+      "consulting",
+      "financial services"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Alexandra Petrova",
+    "company": "PwC",
+    "role": "Senior Associate",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Tax Compliance",
+      "Corporate Tax",
+      "IFRS",
+      "Excel",
+      "Client Comms"
+    ],
+    "keywords": [
+      "international tax",
+      "compliance",
+      "Canadian entities",
+      "tax",
+      "accounting"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Bilal Ahmed",
+    "company": "EY",
+    "role": "Technology Risk Consultant",
+    "schools": [
+      "TMU"
+    ],
+    "skills": [
+      "Audit",
+      "Client Engagement",
+      "ITGC",
+      "Reporting"
+    ],
+    "keywords": [
+      "IT controls",
+      "cyber risks",
+      "consulting",
+      "risk assessment",
+      "technology risk"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Chloe Martin",
+    "company": "KPMG",
+    "role": "Data Scientist",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Natural Language Processing",
+      "Dashboarding",
+      "Client Delivery"
+    ],
+    "keywords": [
+      "machine learning",
+      "data science",
+      "audit",
+      "tax",
+      "risk"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Victor Huang",
+    "company": "RBC",
+    "role": "Security Engineer",
+    "schools": [
+      "University of Ottawa"
+    ],
+    "skills": [
+      "IAM",
+      "OAuth2",
+      "Threat Modeling",
+      "Secure Coding"
+    ],
+    "keywords": [
+      "identity",
+      "access",
+      "secure SDLC",
+      "cybersecurity",
+      "security engineering"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Megan O’Connor",
+    "company": "RBC",
+    "role": "Business Systems Analyst",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Requirements",
+      "Process Mapping",
+      "JIRA",
+      "UAT"
+    ],
+    "keywords": [
+      "business analysis",
+      "technology",
+      "T&O",
+      "requirements gathering",
+      "process improvement"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Arnav Shah",
+    "company": "RBC",
+    "role": "QA Analyst",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Agile",
+      "Postman",
+      "QA",
+      "Selenium",
+      "SQL",
+      "TestRail"
+    ],
+    "keywords": [
+      "API Testing",
+      "UI Testing",
+      "Regression Testing",
+      "Automation",
+      "Digital Apps"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Julia Santos",
+    "company": "Scotiabank",
+    "role": "Android Developer",
+    "schools": [
+      "TMU"
+    ],
+    "skills": [
+      "Kotlin",
+      "Android SDK",
+      "MVVM",
+      "REST"
+    ],
+    "keywords": [
+      "Android",
+      "mobile development",
+      "software engineering",
+      "Kotlin",
+      "app development"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "David Park",
+    "company": "TD",
+    "role": "Data Engineer",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "GCP",
+      "Airflow",
+      "Looker"
+    ],
+    "keywords": [
+      "data engineering",
+      "GCP",
+      "BigQuery",
+      "analytics",
+      "data modeling"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Sarah Thompson",
+    "company": "BMO",
+    "role": "Project Manager",
+    "schools": [
+      "Western University"
+    ],
+    "skills": [
+      "Project Planning",
+      "RAID",
+      "JIRA",
+      "Stakeholder Communication"
+    ],
+    "keywords": [
+      "project management",
+      "technology",
+      "retail systems",
+      "stakeholder engagement",
+      "agile"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Omar El-Sayed",
+    "company": "CIBC",
+    "role": "Cyber Specialist",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Incident Response",
+      "Scripting",
+      "SIEM",
+      "SOC"
+    ],
+    "keywords": [
+      "cybersecurity",
+      "security events",
+      "monitoring",
+      "incident response",
+      "threat detection"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Priyanka Desai",
+    "company": "Google",
+    "role": "Product Manager",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Product Spec",
+      "UX",
+      "Metrics",
+      "A/B Tests"
+    ],
+    "keywords": [
+      "collaboration",
+      "product management",
+      "Google Workspace",
+      "features",
+      "user experience"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Alex Johnson",
+    "company": "Meta",
+    "role": "Machine Learning Engineer",
+    "schools": [
+      "Stanford"
+    ],
+    "skills": [
+      "Feature Stores",
+      "ML Ops",
+      "PyTorch",
+      "Recsys"
+    ],
+    "keywords": [
+      "machine learning",
+      "ranking models",
+      "feed",
+      "model improvement"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Riya Patel",
+    "company": "Amazon",
+    "role": "Program Manager",
+    "schools": [
+      "UBC"
+    ],
+    "skills": [
+      "Program Management",
+      "Excel",
+      "SQL",
+      "Stakeholder Communication"
+    ],
+    "keywords": [
+      "operations",
+      "delivery",
+      "program management",
+      "efficiency",
+      "logistics"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Daniel Morris",
+    "company": "AWS",
+    "role": "Senior Consultant",
+    "schools": [
+      "Dalhousie"
+    ],
+    "skills": [
+      "AWS",
+      "Lambda",
+      "API Gateway",
+      "IaC"
+    ],
+    "keywords": [
+      "AWS",
+      "cloud solutions",
+      "enterprise",
+      "consulting",
+      "infrastructure as code"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Minh Pham",
+    "company": "Uber",
+    "role": "Data Scientist",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "Experimentation",
+      "Geospatial"
+    ],
+    "keywords": [
+      "data analysis",
+      "map quality",
+      "routing",
+      "data modeling",
+      "geospatial analysis"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Emily Carter",
+    "company": "Palantir",
+    "role": "Deployment Strategist",
+    "schools": [
+      "Yale"
+    ],
+    "skills": [
+      "Customer Discovery",
+      "Data Literacy",
+      "Product Demos"
+    ],
+    "keywords": [
+      "deployment",
+      "strategy",
+      "customer engagement",
+      "product adoption",
+      "analytics"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Mark Hamilton",
+    "company": "Snowflake",
+    "role": "Customer Success Manager",
+    "schools": [
+      "McGill"
+    ],
+    "skills": [
+      "Account Management",
+      "SQL",
+      "Data Warehousing"
+    ],
+    "keywords": [
+      "customer success",
+      "data cloud",
+      "value delivery",
+      "data management",
+      "analytics"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Farah Hussain",
+    "company": "Deloitte",
+    "role": "Cyber Consultant",
+    "schools": [
+      "TMU"
+    ],
+    "skills": [
+      "IAM",
+      "Security Assessments",
+      "Reporting"
+    ],
+    "keywords": [
+      "IAM",
+      "security assessments",
+      "cybersecurity",
+      "consulting",
+      "risk management"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Jason Wong",
+    "company": "PwC Canada",
+    "role": "Senior Associate",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Azure",
+      "AWS",
+      "Terraform",
+      "Client Comms"
+    ],
+    "keywords": [
+      "cloud",
+      "digital",
+      "migration",
+      "modernization",
+      "client services"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Lauren Brooks",
+    "company": "EY",
+    "role": "Data & Analytics Senior",
+    "schools": [
+      "Western"
+    ],
+    "skills": [
+      "SQL",
+      "Power BI",
+      "Python",
+      "Client Delivery"
+    ],
+    "keywords": [
+      "analytics",
+      "data",
+      "solutions",
+      "financial services",
+      "client delivery"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Jonathan Kim",
+    "company": "KPMG",
+    "role": "Manager",
+    "schools": [
+      "York"
+    ],
+    "skills": [
+      "Tax",
+      "IFRS",
+      "Client Communications"
+    ],
+    "keywords": [
+      "tax",
+      "financial services",
+      "corporate tax",
+      "advisory",
+      "banking"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Neha Sharma",
+    "company": "RBC",
+    "role": "ML Engineer",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Python",
+      "MLflow",
+      "REST",
+      "MLOps"
+    ],
+    "keywords": [
+      "machine learning",
+      "banking",
+      "MLOps",
+      "model production",
+      "AI"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Brandon Lee",
+    "company": "RBC Capital Markets",
+    "role": "Operations Analyst",
+    "schools": [
+      "York"
+    ],
+    "skills": [
+      "Excel",
+      "VBA",
+      "Reconciliations",
+      "Communication"
+    ],
+    "keywords": [
+      "trade lifecycle",
+      "reconciliations",
+      "finance",
+      "operations",
+      "analysis"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Hannah Wright",
+    "company": "Scotiabank",
+    "role": "Senior Security Analyst",
+    "schools": [
+      "TMU"
+    ],
+    "skills": [
+      "Incident Response",
+      "SIEM",
+      "Scripting"
+    ],
+    "keywords": [
+      "threat monitoring",
+      "detection improvement",
+      "cybersecurity",
+      "security analysis",
+      "risk assessment"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Chloe Anderson",
+    "company": "TD",
+    "role": "HR Business Partner",
+    "schools": [
+      "York"
+    ],
+    "skills": [
+      "Employee Relations",
+      "Talent Strategy",
+      "HRIS"
+    ],
+    "keywords": [
+      "people strategy",
+      "HR",
+      "talent management",
+      "organizational development",
+      "employee engagement"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Kevin Li",
+    "company": "BMO",
+    "role": "Frontend Engineer",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Accessibility",
+      "React",
+      "Testing",
+      "TypeScript"
+    ],
+    "keywords": [],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Aisha Mohamed",
+    "company": "CIBC",
+    "role": "Data Scientist",
+    "schools": [
+      "Waterloo"
+    ],
+    "skills": [
+      "Python",
+      "SAS",
+      "SQL",
+      "Risk Models"
+    ],
+    "keywords": [
+      "credit risk",
+      "PD",
+      "LGD",
+      "risk analytics",
+      "data science"
+    ],
+    "seniority": "Mid"
+  },
+  {
+    "name": "Ben Carter",
+    "company": "Google",
+    "role": "SRE",
+    "schools": [
+      "McGill"
+    ],
+    "skills": [
+      "Go",
+      "Linux",
+      "Monitoring",
+      "Incident Response"
+    ],
+    "keywords": [
+      "reliability",
+      "GCP",
+      "cloud services",
+      "SRE",
+      "incident management"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Sofia Alvarez",
+    "company": "Meta",
+    "role": "Product Engineer",
+    "schools": [
+      "UBC"
+    ],
+    "skills": [
+      "React",
+      "Hack",
+      "GraphQL",
+      "A/B tests"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Kai Nakamura",
+    "company": "Amazon",
+    "role": "Data Scientist",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "Experimentation",
+      "Machine Learning"
+    ],
+    "keywords": [
+      "ad relevance",
+      "bidding",
+      "data science",
+      "advertising",
+      "analytics"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Peter Johnson",
+    "company": "AWS",
+    "role": "Cloud Support Engineer",
+    "schools": [
+      "BCIT"
+    ],
+    "skills": [
+      "AWS",
+      "Linux",
+      "Networking",
+      "Customer Support"
+    ],
+    "keywords": [
+      "cloud support",
+      "AWS",
+      "troubleshooting",
+      "networking",
+      "customer service"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Rachel Kim",
+    "company": "Uber",
+    "role": "Product Manager",
+    "schools": [
+      "Queen’s"
+    ],
+    "skills": [
+      "Product",
+      "Experimentation",
+      "SQL",
+      "Storytelling"
+    ],
+    "keywords": [
+      "driver onboarding",
+      "driver retention",
+      "product management",
+      "user experience",
+      "data analysis"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "James O’Neill",
+    "company": "Palantir",
+    "role": "FDSE",
+    "schools": [
+      "Imperial"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "Data Modeling",
+      "Customer Work"
+    ],
+    "keywords": [
+      "data engineering",
+      "pipelines",
+      "Foundry",
+      "client solutions",
+      "data analysis"
+    ],
+    "seniority": "Other"
+  },
+  {
+    "name": "Ana Torres",
+    "company": "Snowflake",
+    "role": "Senior Sales Engineer",
+    "schools": [
+      "UNAM"
+    ],
+    "skills": [
+      "SQL",
+      "Warehousing",
+      "Demos",
+      "Spanish",
+      "English"
+    ],
+    "keywords": [
+      "data cloud",
+      "LATAM",
+      "POC",
+      "sales engineering",
+      "cloud computing"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Oliver Grant",
+    "company": "Deloitte",
+    "role": "Senior Data Consultant",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "ML",
+      "Client Management"
+    ],
+    "keywords": [
+      "machine learning",
+      "analytics",
+      "data consulting",
+      "project delivery",
+      "client relations"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Nina Kowalski",
+    "company": "PwC",
+    "role": "Risk Assurance Senior",
+    "schools": [
+      "TMU"
+    ],
+    "skills": [
+      "ITGC",
+      "SOX",
+      "Documentation"
+    ],
+    "keywords": [
+      "risk assurance",
+      "IT controls",
+      "business process",
+      "testing",
+      "compliance"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Christopher Bell",
+    "company": "EY",
+    "role": "Senior",
+    "schools": [
+      "McMaster"
+    ],
+    "skills": [
+      "Valuation",
+      "Modeling",
+      "PowerPoint",
+      "Client Comms"
+    ],
+    "keywords": [
+      "M&A",
+      "financial analysis",
+      "transactions",
+      "valuation",
+      "modeling"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Harsh Patel",
+    "company": "KPMG",
+    "role": "Advisory Associate",
+    "schools": [
+      "York"
+    ],
+    "skills": [
+      "Excel",
+      "Financial Analysis",
+      "Report Writing"
+    ],
+    "keywords": [
+      "due diligence",
+      "mid-market deals",
+      "financial reporting",
+      "analysis",
+      "advisory"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Kristina Zaporozhets",
+    "company": "Scotiabank",
+    "role": "Global Analytics and Financial Engineer Intern",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "C",
+      "C++",
+      "Applied Research",
+      "Communication",
+      "Git",
+      "Machine Learning",
+      "MS Office",
+      "Problem Solving",
+      "Software Development",
+      "Teamwork"
+    ],
+    "keywords": [
+      "analytics",
+      "financial engineering",
+      "software development",
+      "research",
+      "machine learning"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Tung Lam Le",
+    "company": "",
+    "role": "Student",
+    "schools": [
+      "College/University"
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "MS Office",
+      "Teamwork",
+      "Communication"
+    ],
+    "keywords": [],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "John Daniel",
+    "company": "(Company)",
+    "role": "(fill from LinkedIn — e.g. Finance/IT/Operations Professional)",
+    "schools": [
+      "(School name)"
+    ],
+    "skills": [
+      "MS Office",
+      "Communication",
+      "Teamwork",
+      "Problem Solving"
+    ],
+    "keywords": [],
+    "seniority": "Other"
+  },
+  {
+    "name": "Asal S.",
+    "company": "RBC",
+    "role": "Technical Systems Analyst",
+    "schools": [
+      "Seneca Polytechnic"
+    ],
+    "skills": [
+      "Systems Analysis",
+      "Technical Documentation",
+      "Stakeholder Communication",
+      "SDLC Basics",
+      "Troubleshooting",
+      "Team Collaboration"
+    ],
+    "keywords": [
+      "technical analysis",
+      "systems documentation",
+      "stakeholder engagement",
+      "IT processes",
+      "peer mentoring"
+    ],
+    "seniority": "Entry"
+  },
+  {
+    "name": "Phuong Linh Do",
+    "company": "College/University",
+    "role": "Student Marketing / Content Projects",
+    "schools": [
+      "Canadian college/university"
+    ],
+    "skills": [
+      "Branding",
+      "Canva",
+      "Communication",
+      "Content Creation",
+      "Digital Marketing",
+      "Organization",
+      "Social Media"
+    ],
+    "keywords": [
+      "branding",
+      "digital marketing",
+      "content creation",
+      "visual storytelling",
+      "social media"
+    ],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Jason Wong",
+    "company": "PwC",
+    "role": "Senior Associate",
+    "schools": [
+      "UofT"
+    ],
+    "skills": [
+      "Azure",
+      "AWS",
+      "Terraform",
+      "Client Comms"
+    ],
+    "keywords": [
+      "cloud",
+      "digital",
+      "migration",
+      "modernization",
+      "client services"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Christopher Bell",
+    "company": "EY",
+    "role": "Strategy and Transactions",
+    "schools": [
+      "McMaster"
+    ],
+    "skills": [
+      "Valuation",
+      "Modeling",
+      "PowerPoint",
+      "Client Comms"
+    ],
+    "keywords": [
+      "M&A",
+      "financial analysis",
+      "transactions",
+      "valuation",
+      "modeling"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Daisy Le",
+    "company": "Current Role",
+    "role": "Business/Accounting/Student Role",
+    "schools": [
+      "School name"
+    ],
+    "skills": [
+      "Communication",
+      "Customer Service",
+      "Organization",
+      "MS Office",
+      "Teamwork"
+    ],
+    "keywords": [],
+    "seniority": "Student/Intern"
+  },
+  {
+    "name": "Natalie Vu",
+    "company": "RBC",
+    "role": "Senior Software Developer",
+    "schools": [
+      "Seneca Polytechnic / College"
+    ],
+    "skills": [
+      "Agile",
+      "C",
+      "C++",
+      "C#",
+      "CSS",
+      "Git",
+      "HTML",
+      "JavaScript",
+      "Node.js",
+      "Problem Solving",
+      "React",
+      "REST APIs",
+      "Scrum",
+      "SQL",
+      "Teamwork",
+      "TypeScript"
+    ],
+    "keywords": [
+      "software development",
+      "full stack",
+      "Agile",
+      "Scrum",
+      "team collaboration"
+    ],
+    "seniority": "Senior"
+  },
+  {
+    "name": "Michelle Clarke",
+    "company": "RBC",
+    "role": "Vice President, Digital Channels",
+    "schools": [
+      "Schulich School of Business, York University",
+      "University of Toronto"
+    ],
+    "skills": [
+      "Digital Strategy",
+      "Product Leadership",
+      "P&L Management",
+      "Stakeholder Management",
+      "Financial Services",
+      "Agile at Scale",
+      "People Leadership"
+    ],
+    "keywords": [
+      "digital channels",
+      "banking",
+      "customer experience",
+      "technology",
+      "inclusive teams"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "David Huang",
+    "company": "Meta",
+    "role": "Principal Software Engineer",
+    "schools": [
+      "Carnegie Mellon University",
+      "University of Illinois at Urbana-Champaign"
+    ],
+    "skills": [
+      "C++",
+      "Hack",
+      "Mentoring",
+      "Performance Engineering",
+      "Python",
+      "Technical Strategy"
+    ],
+    "keywords": [
+      "performance",
+      "reliability",
+      "cost-optimization",
+      "infrastructure",
+      "migrations"
+    ],
+    "seniority": "Lead/Staff"
+  },
+  {
+    "name": "Priya Raman",
+    "company": "Google",
+    "role": "Staff Software Engineer",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "Java",
+      "Go",
+      "Distributed Storage",
+      "API Design",
+      "Technical Leadership",
+      "Cross-Org Collaboration"
+    ],
+    "keywords": [
+      "cloud computing",
+      "data services",
+      "API",
+      "technical direction",
+      "enterprise solutions"
+    ],
+    "seniority": "Lead/Staff"
+  },
+  {
+    "name": "Marko Petrovic",
+    "company": "Amazon",
+    "role": "Principal SDE",
+    "schools": [
+      "University of Belgrade"
+    ],
+    "skills": [
+      "Distributed Systems",
+      "Event-Driven Architectures",
+      "PCI/Security Best Practices",
+      "Design Reviews",
+      "Mentoring",
+      "Java",
+      "Kotlin"
+    ],
+    "keywords": [
+      "Payments",
+      "FinTech",
+      "Architecture",
+      "Technical Vision",
+      "High-Throughput"
+    ],
+    "seniority": "Lead/Staff"
+  },
+  {
+    "name": "Lauren Park",
+    "company": "Palantir",
+    "role": "Engineering Lead",
+    "schools": [
+      "MIT"
+    ],
+    "skills": [
+      "Data Modeling",
+      "Delivery Leadership",
+      "Stakeholder Management",
+      "Onsite Customer Work",
+      "Python",
+      "SQL"
+    ],
+    "keywords": [
+      "deployment",
+      "data governance",
+      "customer enablement",
+      "public sector",
+      "software engineering"
+    ],
+    "seniority": "Lead/Staff"
+  },
+  {
+    "name": "Stephanie Nguyen",
+    "company": "RBC",
+    "role": "Manager, Talent Acquisition",
+    "schools": [
+      "Toronto Metropolitan University"
+    ],
+    "skills": [
+      "Talent Acquisition Strategy",
+      "Tech Recruiting",
+      "Campus Programs",
+      "DEI Hiring",
+      "Stakeholder Management",
+      "ATS/CRM"
+    ],
+    "keywords": [
+      "talent acquisition",
+      "recruiting",
+      "diversity",
+      "equity",
+      "inclusion"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Jason Li",
+    "company": "RBC",
+    "role": "Lead, Early Talent & Campus Programs",
+    "schools": [
+      "Queen’s University"
+    ],
+    "skills": [
+      "Campus Recruitment",
+      "Event Management",
+      "Employer Branding",
+      "Program Design",
+      "Stakeholder Engagement",
+      "University Relations"
+    ],
+    "keywords": [
+      "early talent",
+      "campus programs",
+      "recruitment",
+      "university relations",
+      "talent pipeline"
+    ],
+    "seniority": "Lead/Staff"
+  },
+  {
+    "name": "Robert Chan",
+    "company": "KPMG Canada",
+    "role": "Director, Talent Attraction",
+    "schools": [
+      "University of Toronto"
+    ],
+    "skills": [
+      "Talent Strategy",
+      "TA Operations",
+      "Campus Hiring",
+      "Experienced Hiring",
+      "Employer Brand",
+      "Team Leadership",
+      "HR Analytics"
+    ],
+    "keywords": [
+      "talent attraction",
+      "recruitment",
+      "human resources",
+      "employer branding",
+      "team management"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Ananya Das",
+    "company": "CIBC",
+    "role": "Vice President, Data & Analytics",
+    "schools": [
+      "Ivey Business School"
+    ],
+    "skills": [
+      "Data Strategy",
+      "Analytics Transformation",
+      "Banking",
+      "Executive Stakeholder Management",
+      "People Leadership"
+    ],
+    "keywords": [
+      "data",
+      "analytics",
+      "AI",
+      "machine learning",
+      "banking"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Michael Stevenson",
+    "company": "TD Bank",
+    "role": "Director, Platform Engineering",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "Platform Engineering",
+      "DevOps",
+      "Kubernetes",
+      "Budgeting & Vendor Management",
+      "Leading Managers"
+    ],
+    "keywords": [
+      "CI/CD",
+      "container",
+      "observability",
+      "app teams",
+      "developer platforms"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Farah El-Masri",
+    "company": "BMO Capital Markets",
+    "role": "Principal Data Architect",
+    "schools": [
+      "McGill University"
+    ],
+    "skills": [
+      "Data Governance",
+      "Data Modeling",
+      "SQL",
+      "ETL",
+      "Architecture Reviews",
+      "Mentoring",
+      "Capital Markets"
+    ],
+    "keywords": [
+      "data architecture",
+      "data governance",
+      "data modeling",
+      "capital markets",
+      "regulatory compliance"
+    ],
+    "seniority": "Lead/Staff"
+  },
+  {
+    "name": "Daniela Rivera",
+    "company": "Scotiabank",
+    "role": "Senior Manager, Campus & Early Talent Acquisition",
+    "schools": [
+      "York University"
+    ],
+    "skills": [
+      "Campus Programs",
+      "Early Talent Strategy",
+      "Event Design",
+      "DEI",
+      "Team Leadership"
+    ],
+    "keywords": [
+      "recruitment",
+      "talent acquisition",
+      "campus recruitment",
+      "candidate experience",
+      "school relationships"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Jonathan Miller",
+    "company": "AWS",
+    "role": "Principal Solutions Architect",
+    "schools": [
+      "University of British Columbia"
+    ],
+    "skills": [
+      "AWS Well-Architected",
+      "Security",
+      "Compliance",
+      "Landing Zones",
+      "Executive Advisory",
+      "Public Speaking"
+    ],
+    "keywords": [
+      "cloud transformations",
+      "reference architectures",
+      "mentorship",
+      "financial services",
+      "AWS"
+    ],
+    "seniority": "Lead/Staff"
+  },
+  {
+    "name": "Sarah Park",
+    "company": "Google",
+    "role": "Engineering Manager",
+    "schools": [
+      "University of Toronto"
+    ],
+    "skills": [
+      "People Management",
+      "Goal Setting",
+      "Web Performance",
+      "Modern Web",
+      "Hiring"
+    ],
+    "keywords": [
+      "browser",
+      "performance",
+      "delivery",
+      "career growth",
+      "collaboration"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Ryan Cole",
+    "company": "Meta",
+    "role": "Engineering Manager",
+    "schools": [
+      "MIT"
+    ],
+    "skills": [
+      "People Leadership",
+      "Product Engineering",
+      "Mobile",
+      "Cross-Functional Collaboration"
+    ],
+    "keywords": [
+      "video creation",
+      "editing experiences",
+      "product design",
+      "feature shipping",
+      "team leadership"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Amanda Li",
+    "company": "PwC Canada",
+    "role": "Director, Deals & Valuations",
+    "schools": [
+      "University of Waterloo"
+    ],
+    "skills": [
+      "Valuation",
+      "Financial Modeling",
+      "Client Relationship Management",
+      "People Development"
+    ],
+    "keywords": [
+      "valuations",
+      "financial modeling",
+      "transaction support",
+      "mid-market",
+      "financial services"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Matthew O’Reilly",
+    "company": "Deloitte",
+    "role": "Partner",
+    "schools": [
+      "Ivey Business School"
+    ],
+    "skills": [
+      "Risk Advisory",
+      "Financial Services",
+      "Executive Communication",
+      "Practice Growth"
+    ],
+    "keywords": [
+      "regulatory change",
+      "cyber risk",
+      "third-party risk",
+      "financial services",
+      "risk management"
+    ],
+    "seniority": "Manager+"
+  },
+  {
+    "name": "Karen Dos Santos",
+    "company": "FinOps Analytics",
+    "role": "President & COO",
+    "schools": [
+      "McGill University"
+    ],
+    "skills": [
+      "GTM Strategy",
+      "Customer Success",
+      "SaaS Ops",
+      "Fundraising Support",
+      "People Leadership"
+    ],
+    "keywords": [
+      "FinOps",
+      "analytics",
+      "customer success",
+      "operations",
+      "fundraising"
+    ],
+    "seniority": "Founder"
   }
 ]
