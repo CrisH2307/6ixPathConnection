@@ -14,11 +14,14 @@ if __name__ == "__main__":
 
     G = build_graph(people)
 
-    source_id = "Cris Huynh"       # change to an actual id in your file
-    target_id = "Khoi Vu"    # change to an actual id in your file
+
+    source_id = "cris-huynh-2a52b5274"       # change to an actual id in your file
+    target_id = "khoivu"    # change to an actual id in your file
     topk = shortest_paths_ranked(G, source_id, target_id, max_hops=6, k=3)
 
-    def name(nid): return G.nodes[nid]["name"]
+    def name(nid): 
+        return G.nodes[nid]["name"]
+
     if not topk:
         print("No path ≤ 6 hops.")
     else:
