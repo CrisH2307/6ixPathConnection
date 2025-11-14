@@ -4,9 +4,11 @@ from typing import List, Literal, Optional
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, ValidationError, ConfigDict
 from openai import OpenAI
 from dotenv import load_dotenv
+from models.graph import build_graph, shortest_paths_ranked
 
 # ---------- Storage ----------
 BASE_DIR = Path(__file__).resolve().parent
@@ -15,6 +17,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 PEOPLE_JSON = DATA_DIR / "people.json"
 if not PEOPLE_JSON.exists():
     PEOPLE_JSON.write_text("[]", encoding="utf-8")
+    
 
 # ---------- Schemas ----------
 SeniorityEnum = Literal[
@@ -39,11 +42,23 @@ class ProfileOut(BaseModel):
 class IngestIn(BaseModel):
     people: List[ProfileOut]
 
+class RouteRequest(BaseModel):  
+    source_name: str = Field(..., description="Source person name, e.g. 'Cris Huynh'")
+    target_name: str = Field(..., description="Target person name, e.g. 'Khoi Vu'")
+
 load_dotenv() # Load environment variables from .env file
 
 # ---------- App ----------
 app = FastAPI()
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # JSON Schema for strict structured output (enforced by OpenAI)
 PROFILE_SCHEMA = {
@@ -143,6 +158,28 @@ def _load_people() -> list:
 def _save_people(rows: list):
     PEOPLE_JSON.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
+def _build_graph_and_index():  
+    """
+    Load people.json, build the similarity graph and create a name -> id index.
+    """
+    people = _load_people()
+    if not people:
+        raise HTTPException(
+            status_code=400,
+            detail="No people in database. Ingest profiles first."
+        )
+
+    G = build_graph(people)
+
+    name_to_id = {}
+    for p in people:
+        name = (p.get("name") or "").strip().lower()
+        pid = (p.get("_id") or "").strip()
+        if name and pid:
+            name_to_id[name] = pid
+
+    return G, name_to_id
+
 # --------- Endpoints ---------
 @app.get("/")
 async def root():
@@ -205,3 +242,49 @@ def ingest_people(payload: IngestIn):
 @app.get("/people", response_model=List[ProfileOut])
 def list_people():
     return _load_people()
+
+@app.post("/generate-routes")
+def generate_routes(payload: RouteRequest):
+    """
+    Generate top shortest connection routes between two people, given their names.
+    """
+    G, name_to_id = _build_graph_and_index()
+
+    src_name = payload.source_name.strip().lower()
+    tgt_name = payload.target_name.strip().lower()
+
+    if src_name not in name_to_id:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Source '{payload.source_name}' not found",
+        )
+    if tgt_name not in name_to_id:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Target '{payload.target_name}' not found",
+        )
+
+    src_id = name_to_id[src_name]
+    tgt_id = name_to_id[tgt_name]
+
+    topk = shortest_paths_ranked(G, src_id, tgt_id, max_hops=6, k=3)
+
+    def name(nid): 
+        return G.nodes[nid]["name"]
+
+    data: list[str] = []
+
+    if not topk:
+        return {
+        "source_name": name(src_id),
+        "target_name": name(tgt_id),
+        "paths": None,               
+    }
+
+    return {
+        "source_name": name(src_id),
+        "target_name": name(tgt_id),
+        "paths": topk,               
+    }
+
+

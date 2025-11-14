@@ -2,7 +2,10 @@ import json
 from pathlib import Path
 
 import networkx as nx
-from graph import build_graph, shortest_paths_ranked
+try:
+    from .graph import build_graph, shortest_paths_ranked
+except ImportError:
+    from graph import build_graph, shortest_paths_ranked
 
 
 DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "people.json"

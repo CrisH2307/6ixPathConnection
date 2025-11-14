@@ -1,6 +1,9 @@
 import networkx as nx
 import pandas as pd
-from normalization import enrich_person, rule_skill_sim
+try:
+    from .normalization import enrich_person, rule_skill_sim
+except ImportError:
+    from normalization import enrich_person, rule_skill_sim
 
 W_SKILL, W_SCHOOL, W_COMPANY = 0.7, 0.2, 0.1
 SIM_THRES = 0.2  
