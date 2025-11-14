@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 from sklearn.cluster import KMeans
 import pandas as pd
-
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
@@ -70,7 +69,7 @@ for c in range(k):
 # Save cluster assignments
 cluster_map = {pid: int(lbl) for pid, lbl in zip(ids, labels)}
 for p in people:
-    p["skills"] = cluster_map[str(p["_id"])]
+    p["cluter"] = cluster_map[str(p["_id"])]
 
 print(cluster_map)
 

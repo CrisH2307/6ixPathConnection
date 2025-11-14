@@ -27,6 +27,11 @@ SeniorityEnum = Literal[
 class ExtractIn(BaseModel):
     text: str = Field(..., description="Raw pasted LinkedIn profile text")
 
+class Connection(BaseModel):
+    to: str = Field(..., description="Target person ID (or slug) this profile connects to")
+    strength: float = Field(1.0, description="Connection strength between 0 and 1")
+    tags: List[str] = Field(default_factory=list, description="Labels like 'seneca_classmate', 'same_team_kpmg'")
+
 class ProfileOut(BaseModel):
     model_config = ConfigDict(populate_by_name=True, extra="ignore")
 
@@ -38,6 +43,12 @@ class ProfileOut(BaseModel):
     skills: List[str]
     keywords: List[str]
     seniority: SeniorityEnum
+
+    connections: List[Connection] = Field(
+        default_factory=list,
+        description="Explicit graph edges to other people, if provided"
+    )
+    
 
 class IngestIn(BaseModel):
     people: List[ProfileOut]
@@ -79,12 +90,29 @@ PROFILE_SCHEMA = {
                     "Student/Intern","Entry","Mid","Senior",
                     "Lead/Staff","Manager+","Founder","Other"
                 ]
+            },
+            "connections": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "to": {"type": "string"},
+                        "strength": {"type": "number"},
+                        "tags": {
+                            "type": "array",
+                            "items": {"type": "string"}
+                        }
+                    },
+                    "required": ["to", "strength", "tags"]
+                }
             }
         },
-        "required": ["name","company","role","schools","skills","keywords","seniority"]
+        "required": ["name","company","role","schools","skills","keywords","seniority","connections"]
     },
     "strict": True
 }
+
 
 
 SYSTEM_PROMPT = """You extract structured profile data from raw, pasted LinkedIn text.
@@ -96,6 +124,7 @@ SYSTEM_PROMPT = """You extract structured profile data from raw, pasted LinkedIn
 - "schools" contains formal institutions (degree-granting); exclude short certs unless clearly degree programs.
 - "skills": 10–25 concise items if available; merge obvious synonyms (PostgreSQL/Postgres -> PostgreSQL, Kubernetes/k8s -> Kubernetes).
 - "keywords": 5–15 topical tags (e.g., retrieval, observability, graph search, embeddings).
+- Connections: sort by strength, then by tag count, then by name.
 - Map seniority by title cues:
   Intern/Co-op/RA/TA -> "Student/Intern"
   Junior/New Grad -> "Entry"
@@ -124,6 +153,25 @@ def _postprocess(d: dict) -> dict:
     d["schools"] = _norm_list(d.get("schools", []))
     d["skills"] = _norm_list(d.get("skills", []))
     d["keywords"] = _norm_list(d.get("keywords", []))
+
+    # Normalize connection tags if present
+    conns = d.get("connections") or []
+    norm_conns = []
+    for c in conns:
+        if not isinstance(c, dict):
+            continue
+        tags = _norm_list(c.get("tags", []))
+        strength = c.get("strength", 1.0)
+        try:
+            strength = float(strength)
+        except Exception:
+            strength = 1.0
+        norm_conns.append({
+            "to": str(c.get("to", "")).strip(),
+            "strength": strength,
+            "tags": tags,
+        })
+    d["connections"] = norm_conns
 
     # Ensure required string fields exist
     for k in ("name", "company", "role"):
@@ -218,7 +266,7 @@ def extract_profile(payload: ExtractIn):
         raise HTTPException(status_code=422, detail=json.loads(ve.json()))
     except Exception as e:
         # If model didn't return valid JSON, surface a 502 with message
-        raise HTTPException(status_code=502, detail=f"Extraction failed: {str(e)}")
+        raise HTTPException(status_code=502, detail=f"{str(e)}")
 
 @app.post("/ingest-people")
 def ingest_people(payload: IngestIn):
@@ -307,5 +355,4 @@ def generate_routes(payload: RouteRequest):
         "target_name": name(tgt_id),
         "paths": topk,               
     }
-
 
