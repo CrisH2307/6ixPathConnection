@@ -5,8 +5,10 @@ try:
 except ImportError:
     from normalization import enrich_person, rule_skill_sim
 
-W_SKILL, W_SCHOOL, W_COMPANY = 0.7, 0.2, 0.1
-SIM_THRES = 0.2  
+W_SKILL = 0.9
+W_SCHOOL = 0.05
+W_COMPANY = 0.05
+SIM_THRES = 0.4
 
 def same_school(a,b):  return int(a["school"]  == b["school"])
 def same_company(a,b): return int(a["company"] == b["company"])
@@ -16,7 +18,13 @@ def edge_weight(a,b):
     return W_SKILL*s + W_SCHOOL*same_school(a,b) + W_COMPANY*same_company(a,b)
 
 def should_link(a,b):
-    return rule_skill_sim(a,b) >= SIM_THRES or same_school(a,b) or same_company(a,b)
+    shared_skills = len(set(a["skills_norm"]) & set(b["skills_norm"]))
+    # print("Shared skills between", a["name"], "and", b["name"], ":", shared_skills)
+    return (
+        shared_skills >= 3
+        or (shared_skills >= 0 and same_company(a, b))
+        or (shared_skills >= 2 and same_school(a, b))
+    )
 
 def build_graph(people: list[dict]) -> nx.Graph:
     G = nx.Graph()
@@ -42,16 +50,39 @@ def build_graph(people: list[dict]) -> nx.Graph:
                            })
     return G
 
-def shortest_paths_ranked(G: nx.Graph, source_id: str, target_id: str, max_hops=6, k=3):
+
+'''
+Find up to `max_paths` simple paths (no repeated nodes) from source to target
+with length <= max_hops. Rank them by total edge weight (desc), then by hops (asc)."
+    G: nx.Graph,
+    source_id: str,
+    target_id: str,
+    max_hops: int = 6,
+    max_paths = k: int = 50,
+'''
+def shortest_paths_ranked(G: nx.Graph, source_id: str, target_id: str, max_hops=6, k=50) -> list[dict]:
+     # basic checks
     if not G.has_node(source_id) or not G.has_node(target_id):
         return []
-    if not nx.has_path(G, source_id, target_id):
+   
+    gen = nx.all_simple_paths(G, source=source_id, target=target_id, cutoff=max_hops)
+
+    paths: list[list[str]] = []
+    for p in gen:
+        paths.append(p)
+        if len(paths) >= k:
+            break  
+
+    if not paths:
         return []
+
+    # shortest hop length
+    '''
     hops = nx.shortest_path_length(G, source=source_id, target=target_id)
     if hops > max_hops:
         return []
-
     paths = list(nx.all_shortest_paths(G, source=source_id, target=target_id))
+    '''
 
     def path_score(path):
         return sum(G[u][v]["weight"] for u,v in zip(path[:-1], path[1:]))

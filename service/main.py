@@ -267,12 +267,33 @@ def generate_routes(payload: RouteRequest):
     src_id = name_to_id[src_name]
     tgt_id = name_to_id[tgt_name]
 
-    topk = shortest_paths_ranked(G, src_id, tgt_id, max_hops=6, k=3)
+    topk = shortest_paths_ranked(G, src_id, tgt_id, max_hops=6, k=50)
+
+    # print("Source resolved to node:", src_id)
+    # print("Target resolved to node:", tgt_id)
+    # print("Neighbors of source:", list(G.neighbors(src_id)))
+
+    # for u, v, data in G.edges(data=True):
+    #     print(u, "<->", v, "weight=", data["weight"], "signals=", data["signals"])
+
+    print("Nodes:", G.number_of_nodes())
+    print("Edges:", G.number_of_edges())
+    print("Neighbors of source:", [
+        (nid, G.nodes[nid]["name"]) for nid in G.neighbors(src_id)
+    ])
 
     def name(nid): 
         return G.nodes[nid]["name"]
 
-    data: list[str] = []
+    display_paths = topk
+    print(f"Found {len(display_paths)} paths from '{name(src_id)}' to '{name(tgt_id)}':")
+    for r in display_paths:
+        print(f"PATH ({r['hops']} hops, score={r['score']}):",
+              " -> ".join(name(n) for n in r["nodes"]))
+        for hop in r["hops_detail"]:
+            print("  ", name(hop["from"]), "→", name(hop["to"]),
+                  "| w =", hop["edge_weight"],
+                  "| signals =", hop["signals"])
 
     if not topk:
         return {
