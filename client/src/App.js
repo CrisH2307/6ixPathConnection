@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Container,
   Row,
@@ -17,6 +17,7 @@ function App() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [path, setPath] = useState(100);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +32,7 @@ function App() {
         body: JSON.stringify({
           source_name: sourceName,
           target_name: targetName,
+          paths: path,
         }),
       });
 
@@ -55,6 +57,39 @@ function App() {
   const signals = firstHop?.signals || {};
   const categories_a = firstHop?.signals?.categories_a ?? [];
   const categories_b = firstHop?.signals?.categories_b ?? [];
+  const pathDetails = firstPath?.hops_detail || [];
+  const nodeLookup = useMemo(() => {
+    if (!firstPath?.nodes_detail) return {};
+    return firstPath.nodes_detail.reduce((acc, node) => {
+      if (node?._id) acc[node._id] = node;
+      return acc;
+    }, {});
+  }, [firstPath]);
+
+  const displayName = (nodeId) => {
+    const node = nodeLookup[nodeId];
+    return node?.name || node?.id || nodeId;
+  };
+
+  const describeSignals = (hopSignals = {}) => {
+    const reasons = [];
+    if (typeof hopSignals.skill_similarity === "number") {
+      reasons.push(`Skill similarity ${hopSignals.skill_similarity.toFixed(2)}`);
+    }
+    if (hopSignals.same_school) reasons.push("Same school");
+    if (hopSignals.same_company) reasons.push("Same company");
+    const sharedCats = Array.isArray(hopSignals.categories_a)
+      && Array.isArray(hopSignals.categories_b)
+      ? hopSignals.categories_a.filter((cat) =>
+          hopSignals.categories_b.includes(cat)
+        )
+      : [];
+    if (sharedCats.length) {
+      reasons.push(`Shared focus: ${sharedCats.join(", ")}`);
+    }
+    if (!reasons.length) reasons.push("No shared signals captured.");
+    return reasons;
+  };
 
   console.log(result);
 
@@ -113,6 +148,45 @@ function App() {
                   <strong>To:</strong> {result.target_name}
                 </p>
 
+                {pathDetails.length > 0 && (
+                  <div className="mb-3">
+                    <ListGroup>
+                      {pathDetails.map((hop, index) => {
+                        const reasons = describeSignals(hop.signals);
+                        return (
+                          <ListGroup.Item
+                            key={`${hop.from}-${hop.to}-${index}`}
+                            className="py-3"
+                          >
+                            <div className="d-flex align-items-center flex-wrap mb-2">
+                              <span className="fw-bold me-2">Step {index + 1}</span>
+                              <span className="me-2">{displayName(hop.from)}</span>
+                              <span className="text-muted me-2">→</span>
+                              <span>{displayName(hop.to)}</span>
+                              {typeof hop.edge_weight === "number" && (
+                                <Badge bg="info" className="ms-3 text-dark">
+                                  Weight {hop.edge_weight.toFixed(2)}
+                                </Badge>
+                              )}
+                            </div>
+                            <div className="small text-muted">
+                              {reasons.map((reason) => (
+                                <Badge
+                                  bg="light"
+                                  key={`${hop.from}-${hop.to}-${index}-${reason}`}
+                                  className="me-1 mb-1 text-dark"
+                                >
+                                  {reason}
+                                </Badge>
+                              ))}
+                            </div>
+                          </ListGroup.Item>
+                        );
+                      })}
+                    </ListGroup>
+                  </div>
+                )}
+
                 {firstPath && (
                   <p className="mb-3">
                     <strong>Top path hops:</strong> {firstPath.hops}
@@ -136,12 +210,12 @@ function App() {
 
                     <div className="mb-2">
                       {signals.same_school && (
-                        <Badge key={signals.same_school} bg="secondary" className="me-1">
+                        <Badge bg="secondary" className="me-1">
                           Same school
                         </Badge>
                       )}
                       {signals.same_company && (
-                        <Badge key={signals.same_company} bg="secondary" className="me-1">
+                        <Badge bg="secondary" className="me-1">
                           Same company
                         </Badge>
                       )}
