@@ -1,27 +1,87 @@
 [{"id":"travis_liu","text":"Name: Travis Liu\nHeadline: Software Engineer in Test — RBC\nLocation: Mississauga, Ontario, Canada (Hybrid)\n\nAbout: Software Engineer in Test at RBC focused on reliable UI/API automation and quality gates for cloud-native services. I build and maintain Selenium test suites, API testing frameworks, and CI/CD checks for apps running on OpenShift/Kubernetes, with observability via ELK and Dynatrace. Previously at Seneca, I contributed to the International Agents Portal and Academic Pathways projects and supported instructors and students as a Lab Assistant.\n\nExperience:\n• Software Engineer in Test — RBC (Permanent Full-time), Oct 2024–Present, Canada (Hybrid)\n  Work: Selenium E2E/UI, API testing, test methodologies, CI/CD gating, observability with ELK/Dynatrace; collaborate with DevOps/product teams.\n• Software Developer — Seneca Polytechnic (Contract Full-time), May 2023–May 2024, North York (Hybrid)\n  Work: 12-person team; International Agents Portal & Academic Pathways; React/Next.js, REST APIs, DB work, report development; deployments with a DevOps engineer.\n• Student Lab Assistant — Seneca Polytechnic, Jan 2023–May 2023\n  Work: Supported 3 instructors and ~60 students; troubleshooting, explaining technical concepts, improving documentation.\n• Member, Board of Directors — Seneca Student Federation (Contract Part-time), May 2023–May 2024, North York (Hybrid)\n  Work: Team leadership and management.\n\nEducation:\nSeneca Polytechnic — Associate’s Degree, Computer Programming & Analysis (Jan 2022–Aug 2024), GPA 3.9\nRelevant: Cloud Computing, Data Structures, Software Testing.\n\nSkills: Selenium; Test Automation; Test Engineering; Software Testing; API Testing; Web Testing; CI/CD; Kubernetes; OpenShift; Docker; Elastic Stack (ELK); Dynatrace; REST APIs; Python; JavaScript/TypeScript; React.js; Next.js; MongoDB; SQL/Databases; Database Testing; OAuth; Jest; GitHub; .NET; C++; Troubleshooting; DevOps; Project Management."},
-  {
+    {
     "id": "kristina_z_16412b2a7",
-    "text": "Name: Kristina Zaporozhets\nHeadline: GAFE Intern at Scotia | Research Assistant at Seneca | Software Development student at Seneca\nLocation: Toronto, Ontario, Canada\n\nAbout: Global Analytics and Finacial Engineer Intern\n\nExperience:\n• Current Role — Global Analytics and Financial Engineer Intern - Scotiabank (May 2025- Present), Research Assistant (AMD Project + TROES Project) C++, C (Mar 2024- May 2024, Nov 2024 - Apr 2025)\n  Work: Scotiabank Financial Engineer Pepartment.\n• Previous Role — (Company), (Dates)\n  Work: C, Software Development, C++, Git, Applied Research, Machine Learning .\n\nEducation:\n• Seneca Polytechnic-Honours Bachelor of Technology – Software Development \n\nSkills: Communication; MS Office; Teamwork; Problem Solving; C, Software Development, C++, Git, Applied Research, Machine Learning."
+    "text": "Name: Kristina Zaporozhets\nHeadline: GAFE Intern at Scotia | Research Assistant at Seneca | Software Development student at Seneca\nLocation: Toronto, Ontario, Canada\n\nAbout: Global Analytics and Financial Engineer Intern.\n\nExperience:\n• Global Analytics and Financial Engineer Intern — Scotiabank (May 2025–Present)\n• Research Assistant — Seneca (AMD + TROES Project)\n  Work: C, C++, Git, applied research, machine learning.\n\nEducation:\n• Seneca Polytechnic — Honours Bachelor of Technology, Software Development\n\nSkills: Communication; MS Office; Teamwork; Problem Solving; C; Software Development; C++; Git; Applied Research; Machine Learning.",
+    "connections": [
+      { "to": "cris_huynh_2a52b5274", "strength": 0.5, "tags": ["seneca_classmate"] },
+      { "to": "sophia_tran_rbc_dev", "strength": 0.7, "tags": ["rbc_tech_org", "automation_ui_api_overlap"] },
+      { "to": "ngoc_vien_do_991273gs1", "strength": 0.4, "tags": ["research_lab_teammate"] },
+      { "to": "vladyslav_huziienko_57017a235", "strength": 0.65, "tags": ["seneca_classmate", "research_lab_overlap"] },
+      { "to": "maksym-volkovynskyi-802675271", "strength": 0.55, "tags": ["seneca_classmate"] }
+    ]
   },
   {
-    "id": "ngoc_vien_do_b13b37244",
-    "text": "Name: Ngoc Vien Do\nHeadline: BA Financial Mathematics & Economics Candidate — York University | Seeking Summer 2026 Internship/Co-op\nLocation: Toronto, Ontario, Canada\n\nAbout: Financial Mathematics & Economics student at York University interested in quantitative finance, data-driven research, and capital markets. Actively involved in student clubs and networking with industry professionals, and preparing for CFA Level 1.\n\nExperience:\n• Student/Research/Club Roles — York University, 2024–Present\n  Work: Finance/economics coursework, quantitative/ML-in-finance projects, student association participation.\n• Volunteer/Student Events — YorkU clubs\n  Work: Event support, outreach, communication.\n\nEducation:\n• York University — BA, Financial Mathematics and Economics\n\nSkills: Financial Analysis; Economics; Quantitative Finance; Data Analysis; Statistics; Time Series Concepts; Excel; Python; Research; Capital Markets; Communication."
+    "id": "ngoc_vien_do_991273gs1",
+    "text": "Name: Ngoc Vien Do\nHeadline: Software Developer\nLocation: Toronto, Ontario, Canada\n\nAbout: Full-stack developer with background in TypeScript, React, and DevOps.\n\nExperience:\n• Software Developer — (Company not specified)\n\nEducation:\n• Seneca Polytechnic\n\nSkills: JavaScript; TypeScript; React; Node.js; Team Collaboration; Problem Solving.",
+    "connections": [
+      { "to": "cris_huynh_2a52b5274", "strength": 1.0, "tags": ["highschool_friend"] },
+      { "to": "kristina_z_16412b2a7", "strength": 0.4, "tags": ["seneca_project_group"] }
+    ]
   },
   {
     "id": "andrewnt219",
-    "text": "Name: Andrew Nguyen\nHeadline: Software Engineer / Developer — KPMG Canada\nLocation: York Region, Ontario, Canada\n\nAbout: Software engineer who enjoys writing clean, maintainable code for people. Experience building internal/business applications at KPMG Canada and trained at Seneca College. Interested in modern web stacks and team collaboration.\n\nExperience:\n• Software Engineer — KPMG Canada, (Dates from LinkedIn)\n  Work: Build, test, and maintain software modules; collaborate with business stakeholders; follow SDLC and code reviews.\n• Student / Project Developer — Seneca College\n  Work: Academic and capstone projects using web technologies.\n\nEducation:\n• Seneca College — Computer Programming / Software Development\n\nSkills: JavaScript; TypeScript; React; Node.js; REST APIs; Git/GitHub; SQL; Problem Solving; Agile/Scrum; Communication."
+    "text": "Name: Andrew Nguyen\nHeadline: Software Engineer / Developer — KPMG Canada\nLocation: York Region, Ontario, Canada\n\nAbout: Software engineer who enjoys writing clean, maintainable code for people. Experience building internal/business applications at KPMG Canada and trained at Seneca College. Interested in modern web stacks and team collaboration.\n\nExperience:\n• Software Engineer — KPMG Canada, (Dates from LinkedIn)\n  Work: Build, test, and maintain software modules; collaborate with business stakeholders; follow SDLC and code reviews.\n• Student / Project Developer — Seneca College\n  Work: Academic and capstone projects using web technologies.\n\nEducation:\n• Seneca College — Computer Programming / Software Development\n\nSkills: JavaScript; TypeScript; React; Node.js; REST APIs; Git/GitHub; SQL; Problem Solving; Agile/Scrum; Communication.",
+    "connections": [
+      {
+        "to": "cris_huynh_2a52b5274",
+        "strength": 0.85,
+        "tags": ["mentor_mentee", "seneca_alumni"]
+      }
+    ]
   },
   {
     "id": "tanise_lacasse_cpa_ca_5ab67640",
-    "text": "Name: Tanise Lacasse, CPA, CA\nHeadline: Partner, Canadian Corporate / Asset & Wealth Management Tax — KPMG Canada\nLocation: Calgary, Alberta, Canada\n\nAbout: CPA, CA with deep experience advising Canadian and multinational clients on corporate tax, asset and wealth management tax, and compliance. Leads teams, manages key client relationships, and supports growth initiatives at KPMG.\n\nExperience:\n• Partner — KPMG Canada, (Dates from LinkedIn)\n  Work: Corporate tax advisory, asset/wealth management tax, oversight of engagements, coaching and talent development.\n• Earlier Tax/Accounting Roles — KPMG Canada\n  Work: Corporate tax filings, audit support, client advisory.\n\nEducation:\n• University of Calgary (or Canadian business/accounting program — confirm on paste)\n• CPA, CA designation\n\nSkills: Corporate Tax; Canadian Tax; Accounting; Financial Reporting; IFRS; Asset & Wealth Management; Client Advisory; Leadership; Stakeholder Management; Team Development."
+    "text": "Name: Tanise Lacasse, CPA, CA\nHeadline: Partner, Canadian Corporate / Asset & Wealth Management Tax — KPMG Canada\nLocation: Calgary, Alberta, Canada\n\nAbout: CPA, CA with deep experience advising Canadian and multinational clients on corporate tax, asset and wealth management tax, and compliance. Leads teams, manages key client relationships, and supports growth initiatives at KPMG.\n\nExperience:\n• Partner — KPMG Canada, (Dates from LinkedIn)\n  Work: Corporate tax advisory, asset/wealth management tax, oversight of engagements, coaching and talent development.\n• Earlier Tax/Accounting Roles — KPMG Canada\n  Work: Corporate tax filings, audit support, client advisory.\n\nEducation:\n• University of Calgary (or Canadian business/accounting program — confirm on paste)\n• CPA, CA designation\n\nSkills: Corporate Tax; Canadian Tax; Accounting; Financial Reporting; IFRS; Asset & Wealth Management; Client Advisory; Leadership; Stakeholder Management; Team Development.",
+    "connections": [
+      {
+        "to": "cris_huynh_2a52b5274",
+        "strength": 0.3,
+        "tags": ["senior_leader_kpmg", "organizational_network"]
+      },
+      {
+        "to": "amanda_li_pwc_2712xx91",
+        "strength": 0.25,
+        "tags": ["cross_firm_tax_network"]
+      },
+      { "to": "jay_vakil_kpmg_19ab7da3", "strength": 0.45, "tags": ["kpmg_cross_service_line"] }
+    ]
   },
   {
     "id": "iryna_sychova",
-    "text": "Name: Iryna Sychova\nHeadline: Finance / Accounting Professional — KPMG Canada\nLocation: Toronto, Ontario, Canada\n\nAbout: Accounting/finance professional working in a large professional-services environment (KPMG). Brings strong practical accounting skills and Canadian college training.\n\nExperience:\n• Finance/Accounting — KPMG Canada, (Dates)\n  Work: Support accounting and finance processes, documentation, coordination with internal teams.\n\nEducation:\n• George Brown College — Accounting/Business (from public results)\n\nSkills: Accounting; Financial Reporting; Excel; Organizational Skills; Communication; Teamwork."
+    "text": "Name: Iryna Sychova\nHeadline: Finance / Accounting Professional — KPMG Canada\nLocation: Toronto, Ontario, Canada\n\nAbout: Accounting/finance professional working in a large professional-services environment (KPMG). Brings strong practical accounting skills and Canadian college training.\n\nExperience:\n• Finance/Accounting — KPMG Canada, (Dates)\n  Work: Support accounting and finance processes, documentation, coordination with internal teams.\n\nEducation:\n• George Brown College — Accounting/Business (from public results)\n\nSkills: Accounting; Financial Reporting; Excel; Organizational Skills; Communication; Teamwork.",
+    "connections": [
+      {
+        "to": "tanise_lacasse_cpa_ca_5ab67640",
+        "strength": 0.4,
+        "tags": ["kpmg_finance_team", "organizational_network"]
+      }
+    ]
   },
   {
     "id": "minhduc_hoang",
-    "text": "Name: Minh Duc Hoang\nHeadline: Software Engineer — Google\nLocation: Canada (to confirm in LinkedIn)\n\nAbout: Software engineer with a strong academic background (University of Pennsylvania) and experience at Google working on large-scale software systems. Interested in algorithms, systems design, and high-quality engineering.\n\nExperience:\n• Software Engineer — Google, (Dates)\n  Work: Design, implement, and maintain production services; collaborate with cross-functional teams.\n\nEducation:\n• University of Pennsylvania — (CS/Engineering)\n\nSkills: Software Engineering; Algorithms & Data Structures; Python; Java; Systems Design; Code Review; Collaboration."
+    "text": "Name: Minh Duc Hoang\nHeadline: Software Engineer — Google\nLocation: Canada (to confirm in LinkedIn)\n\nAbout: Software engineer with a strong academic background (University of Pennsylvania) and experience at Google working on large-scale software systems. Interested in algorithms, systems design, and high-quality engineering.\n\nExperience:\n• Software Engineer — Google, (Dates)\n  Work: Design, implement, and maintain production services; collaborate with cross-functional teams.\n\nEducation:\n• University of Pennsylvania — (CS/Engineering)\n\nSkills: Software Engineering; Algorithms & Data Structures; Python; Java; Systems Design; Code Review; Collaboration.",
+    "connections": [
+      {
+        "to": "cris_huynh_2a52b5274",
+        "strength": 0.2,
+        "tags": ["mentor_mentee", "academic_network"]
+      },
+      {
+        "to": "andrewnt219",
+        "strength": 0.15,
+        "tags": ["software_engineering_network"]
+      },
+      {
+        "to": "travis_liu",
+        "strength": 0.25,
+        "tags": ["software_engineering_network"]
+      },
+      {
+        "to": "kristina_z_16412b2a7",
+        "strength": 0.1,
+        "tags": ["academic_network"]
+      }
+    ]
   },
   {
     "id": "jadengiangdang",
@@ -37,7 +97,14 @@
   },
   {
     "id": "khoivu",
-    "text": "Name: Khoi Vu\nHeadline: Full-stack Developer — RBC (BattleSnake Champion)\nLocation: Toronto, Ontario, Canada\n\nAbout: Full-stack developer at RBC. Noted in public profile for winning RBC BattleSnake coding competitions (top in Canada). Builds and maintains production-grade applications and enjoys competitive programming.\n\nExperience:\n• Full-stack Developer — RBC, (Dates)\n  Work: Build features across frontend and backend, integrate services, write tests, collaborate with product/DevOps.\n• Previous projects/hackathons — (Dates)\n\nEducation:\n• University: Seneca College/Polytechnic\n\nSkills: JavaScript/TypeScript; React; Node.js; REST APIs; SQL; Git; CI/CD; Competitive Programming."
+    "text": "Name: Khoi Vu\nHeadline: Full-stack Developer — RBC (BattleSnake Champion)\nLocation: Toronto, Ontario, Canada\n\nAbout: Full-stack developer at RBC. Noted in public profile for winning RBC BattleSnake coding competitions (top in Canada). Builds and maintains production-grade applications and enjoys competitive programming.\n\nExperience:\n• Full-stack Developer — RBC, (Dates)\n  Work: Build features across frontend and backend, integrate services, write tests, collaborate with product/DevOps.\n• Previous projects/hackathons — (Dates)\n\nEducation:\n• University: Seneca College/Polytechnic\n\nSkills: JavaScript/TypeScript; React; Node.js; REST APIs; SQL; Git; CI/CD; Competitive Programming.",
+    "connections": [
+      {
+        "to": "cris_huynh_2a52b5274",
+        "strength": 0.9,
+        "tags": ["landlord_tenant", "close_friend_group"]
+      }
+    ]
   },
   {
     "id": "aryank1511",
@@ -52,8 +119,12 @@
     "text": "Name: Angel Shinh\nHeadline: Technical Systems Analyst — RBC | Computer Science Instructor — LogicFusion | Developer & UI/UX Designer @ CUSEC\nLocation: Greater Toronto Area, Ontario, Canada\n\nAbout: Software/tech generalist who builds ML models, ships full-stack apps, and participates in the Canadian student engineering community. Works as a Technical Systems Analyst at RBC and teaches computer science fundamentals.\n\nExperience:\n• Technical Systems Analyst — RBC, (Dates)\n  Work: Systems analysis, documentation, work with engineering teams.\n• Computer Science Instructor — LogicFusion, (Dates)\n  Work: Teach CS/programming to students.\n• Developer & UI/UX Designer — CUSEC, (Dates)\n  Work: Frontend/UI work for student conference.\n\nEducation:\n• (Canadian postsecondary — fill from LinkedIn)\n\nSkills: C++; Python; JavaScript; Full-Stack Development; UI/UX; Teaching; Systems Analysis; Git; Team Collaboration."
   },
   {
-    "id": "jay_vakil",
-    "text": "Name: Jay Vakil\nHeadline: Building “todayistheday” | Prev: KPMG, Ontario Government, IBM SA | CPA Path (Seneca)\nLocation: Toronto, Ontario, Canada\n\nAbout: Accounting/tech/professional-services background with experience at KPMG, Ontario Government, and IBM SA. Now building/leading the initiative “todayistheday” and sharing content on careers and growth.\n\nExperience:\n• Founder/Builder — todayistheday, (Dates)\n  Work: Content, community, product-building.\n• Previous roles — KPMG; Ontario Government; IBM SA\n  Work: Accounting/tech/support depending on role.\n\nEducation:\n• Seneca College — Accounting/CPA Pathway\n\nSkills: Accounting; Stakeholder Engagement; Content/Community Building; Excel; Communication; Public Sector Exposure."
+    "id": "jay_vakil_kpmg_19ab7da3",
+    "text": "Name: Jay Vakil\nHeadline: Senior Developer — KPMG Canada\nLocation: Toronto, Ontario, Canada\n\nAbout: Senior developer focused on backend systems, internal tools, CI/CD, and cross-functional collaboration with both engineering and business units.\n\nExperience:\n• Senior Developer — KPMG Canada\n\nEducation:\n• University of Toronto\n\nSkills: Python; CI/CD; Cloud; Kubernetes; Internal Platforms; Communication; Leadership.",
+    "connections": [
+      { "to": "cris_huynh_2a52b5274", "strength": 0.95, "tags": ["same_team_kpmg"] },
+      { "to": "amanda_li_pwc_2712xx91", "strength": 0.4, "tags": ["cross_firm_project_partner"] }
+    ]
   },
   {
     "id": "ph_thanh_tran",
@@ -81,7 +152,13 @@
   },
   {
     "id": "vladyslav_huziienko_57017a235",
-    "text": "Name: Vladyslav Huziienko\nHeadline: Software Developer Intern — Autodesk | B.Tech Software Development — Seneca Polytechnic\nLocation: Toronto / North York, Ontario, Canada\n\nAbout: Early-career software developer working with modern web technologies (JavaScript/TypeScript, React) and collaborating with engineering teams at Autodesk. Active in the Seneca community and shares advice on co-op pathways.\n\nExperience:\n• Software Developer Intern — Autodesk, (Dates)\n  Work: Frontend/web development, code reviews, feature implementation.\n• Student Developer — Seneca Polytechnic\n  Work: Web applications, team-based projects, Git workflows.\n\nEducation:\n• Seneca Polytechnic — Bachelor of Technology, Software Development\n\nSkills: JavaScript; TypeScript; React; REST APIs; Git; Frontend Development; Web Applications; Problem Solving; Team Collaboration."
+    "text": "Name: Vladyslav Huziienko\nHeadline: Software Developer Intern — Autodesk | B.Tech Software Development — Seneca Polytechnic\nLocation: Toronto / North York, Ontario, Canada\n\nAbout: Early-career software developer working with modern web technologies (JavaScript/TypeScript, React) and collaborating with engineering teams at Autodesk. Active in the Seneca community and shares advice on co-op pathways.\n\nExperience:\n• Software Developer Intern — Autodesk, (Dates)\n  Work: Frontend/web development, code reviews, feature implementation.\n• Student Developer — Seneca Polytechnic\n  Work: Web applications, team-based projects, Git workflows.\n\nEducation:\n• Seneca Polytechnic — Bachelor of Technology, Software Development\n\nSkills: JavaScript; TypeScript; React; REST APIs; Git; Frontend Development; Web Applications; Problem Solving; Team Collaboration.",
+    "connections":[
+      { "to": "cris_huynh_2a52b5274", "strength": 0.65, "tags": ["seneca_classmate", "research_lab_overlap"] },
+      { "to": "sean-muniz-1b0b4a372", "strength": 0.6, "tags": ["seneca_program_cohort"] },
+      { "to": "kristina_z_16412b2a7", "strength": 0.65, "tags": ["seneca_classmate", "research_lab_overlap"] },
+      { "to": "maksym-volkovynskyi-802675271", "strength": 0.55, "tags": ["seneca_classmate"] }
+    ]
   },
   {
     "id": "emilia_hoang",
@@ -129,7 +206,19 @@
   },
   {
     "id": "gurmehakuppal",
-    "text": "Name: Gurmehak Kaur Uppal\nHeadline: Software Developer & Quality Engineering — RBC | Seneca Polytechnic\nLocation: Greater Toronto Area, Ontario, Canada\n\nAbout: Software developer and QE professional at RBC, curiously exploring software engineering as a long-term career. Background from Seneca in software/tech, experience creating content (YouTube) and working in collaborative teams. Focus on building reliable software and testable services.\n\nExperience:\n• Software Dev & QE — RBC, (Dates from LinkedIn)\n  Work: Contribute to application development and quality gates; write and run tests; collaborate with engineering teams.\n• Content / YouTube Experience — (Dates)\n  Work: Create and share tech/learning content.\n\nEducation:\n• Seneca Polytechnic — Software/IT-related program\n\nSkills: Software Development; Test Automation; QA/QE; JavaScript/Python (fill from profile); Problem Solving; Communication; Collaboration."
+    "text": "Name: Gurmehak Kaur Uppal\nHeadline: Software Developer & Quality Engineering — RBC | Seneca Polytechnic\nLocation: Greater Toronto Area, Ontario, Canada\n\nAbout: Software developer and QE professional at RBC, curiously exploring software engineering as a long-term career. Background from Seneca in software/tech, experience creating content (YouTube) and working in collaborative teams. Focus on building reliable software and testable services.\n\nExperience:\n• Software Dev & QE — RBC, (Dates from LinkedIn)\n  Work: Contribute to application development and quality gates; write and run tests; collaborate with engineering teams.\n• Content / YouTube Experience — (Dates)\n  Work: Create and share tech/learning content.\n\nEducation:\n• Seneca Polytechnic — Software/IT-related program\n\nSkills: Software Development; Test Automation; QA/QE; JavaScript/Python (fill from profile); Problem Solving; Communication; Collaboration.",
+    "connections": [
+      {
+        "to": "cris_huynh_2a52b5274",
+        "strength": 0.6,
+        "tags": ["seneca_classmate", "rbc_tech_org"]
+      },
+      {
+        "to": "sophia_tran_rbc_dev",
+        "strength": 0.7,
+        "tags": ["rbc_tech_org", "automation_ui_api_overlap"]
+      }
+    ]
   },
   {
     "id": "yukti-mulani-311459218",
@@ -168,20 +257,54 @@
     "text": "Name: Rob Jessop\nHeadline: Senior Recruiter & Talent Attraction Leader — Canada\nLocation: Toronto, Ontario, Canada\n\nAbout: Senior recruitment and talent attraction leader with significant experience building hiring strategies, partnering with business leaders, and driving talent acquisition success. Focused on candidate experience and employer brand.\n\nExperience:\n• Senior Recruiter / Talent Attraction Leader — (Canadian organization), (Dates)\n  Work: Lead recruitment campaigns, source candidates, manage stakeholder expectations, improve TA processes.\n\nEducation:\n• (Postsecondary — fill from LinkedIn)\n\nSkills: Talent Acquisition; Candidate Sourcing; Employer Branding; Stakeholder Management; Interviewing; Campus/Early Talent."
   },
   {
-    "id": "cris-huynh-2a52b5274",
-    "text": "Name: Cris Huynh\nHeadline: Incoming Software Developer — KPMG Canada | ITS @ Seneca | Hackathon & AI/ML Enthusiast\nLocation: Toronto, Ontario, Canada\n\nAbout: Incoming Software Developer at KPMG Canada with a strong foundation from Seneca’s ITS program. Actively participates in Canadian student hackathons (Seneca Hackathon, SpurHacks) and shares learning on algorithms, data structures, DevOps/operations, and career building. Interested in backend/web, cloud tooling, and building real products.\n\nExperience:\n• Incoming Software Developer — KPMG Canada, 2025 (offer accepted)\n  Work: Will contribute to software development initiatives, collaborate with engineering teams, and apply full-stack fundamentals learned at Seneca.\n• ITS (Information Technology Services) — Seneca Polytechnic, 2024–Present\n  Work: Support IT-related tasks, student/community tech activities, and help promote hackathons and tech events.\n• Hackathon Participant — Various (Seneca Hackathon, SpurHacks), 2024–2025\n  Work: Built small AI/ML and web projects under time constraints; presented to judges; collaborated with student teams.\n\nEducation:\n• Seneca Polytechnic — Advanced Diploma/Program in Software/Technology (in progress)\n\nSkills: JavaScript; Python; Web Development; Algorithms & Data Structures; Git/GitHub; Problem Solving; Hackathon Prototyping; Communication; Team Collaboration; DevOps Awareness."
+    "id": "cris_huynh_2a52b5274",
+    "text": "Name: Cris Huynh\nHeadline: Software Developer — KPMG Canada\nLocation: Toronto, Ontario, Canada\n\nAbout: Software Developer with strong background in JavaScript, Python, full-stack development, DevOps, and rapid prototyping from hackathons.\n\nExperience:\n• Software Developer — KPMG Canada\n  Work: Internal platforms, automation tooling, DevOps CI/CD support.\n• Hackathon Lead Developer — Multiple Teams\n  Work: Prototyping, backend APIs, UI engineering.\n\nEducation:\n• Seneca Polytechnic — Software Development\n\nSkills: JavaScript; Python; Web Development; Algorithms; Data Structures; Git; GitHub; Problem Solving; Hackathon Prototyping; Communication; Team Collaboration; DevOps.",
+    "connections": [
+      { "to": "ngoc_vien_do_991273gs1", "strength": 1.0, "tags": ["highschool_friend", "close_friend_group"] },
+      { "to": "jay_vakil_kpmg_19ab7da3", "strength": 0.95, "tags": ["same_team_kpmg"] },
+      { "to": "kristina_z_16412b2a7", "strength": 0.5, "tags": ["seneca_classmate"] },
+      { "to": "minhduc_hoang", "strength": 0.2, "tags": ["mentee"] },
+      { "to": "khoivu", "strength": 0.9, "tags": ["landlord_tenant", "close_friend_group"] },
+      { "to": "andrewnt219", "strength": 0.85, "tags": ["mentor_mentee", "seneca_alumni"] },
+
+      { "to": "daisyle2510", "strength": 0.9, "tags": ["close_friend_group"] },
+      { "to": "vladyslav_huziienko_57017a235", "strength": 0.95, "tags": ["close_friend_group"] },
+      { "to": "sean-muniz-1b0b4a372", "strength": 0.9, "tags": ["close_friend_group"] },
+      { "to": "maksym-volkovynskyi-802675271", "strength": 0.9, "tags": ["close_friend_group"] },
+
+      { "to": "linh_nguyen_685a0871", "strength": 0.8, "tags": ["landlord_tenant", "close_friend_group"] }
+    ]
   },
   {
     "id": "maksym-volkovynskyi-802675271",
-    "text": "Name: Maksym Volkovynskyi\nHeadline: Full-stack Software Developer — Brand Glow Up | Seneca Polytechnic\nLocation: Canada (GTA)\n\nAbout: Full-stack developer building web solutions for Brand Glow Up. Seneca-trained, active in the Toronto/Seneca tech community, and engages with internship/co-op posts. Comfortable across frontend and backend stacks and working with small teams.\n\nExperience:\n• Full-stack Software Developer — Brand Glow Up, (Dates from LinkedIn)\n  Work: Develop and maintain full-stack features, build UI components, connect to backend services, and support site performance.\n• Student Developer — Seneca Polytechnic\n  Work: Academic and capstone projects using modern web technologies.\n\nEducation:\n• Seneca Polytechnic — Software Development / Computer Programming\n\nSkills: HTML/CSS/JavaScript; React or similar frontend; Node.js/Express; REST APIs; Git/GitHub; Responsive Design; Debugging; Teamwork."
+    "text": "Name: Maksym Volkovynskyi\nHeadline: Full-stack Software Developer — Brand Glow Up | Seneca Polytechnic\nLocation: Canada (GTA)\n\nAbout: Full-stack developer building web solutions for Brand Glow Up. Seneca-trained, active in the Toronto/Seneca tech community, and engages with internship/co-op posts. Comfortable across frontend and backend stacks and working with small teams.\n\nExperience:\n• Full-stack Software Developer — Brand Glow Up, (Dates from LinkedIn)\n  Work: Develop and maintain full-stack features, build UI components, connect to backend services, and support site performance.\n• Student Developer — Seneca Polytechnic\n  Work: Academic and capstone projects using modern web technologies.\n\nEducation:\n• Seneca Polytechnic — Software Development / Computer Programming\n\nSkills: HTML/CSS/JavaScript; React or similar frontend; Node.js/Express; REST APIs; Git/GitHub; Responsive Design; Debugging; Teamwork.",
+    "connections": [
+      { "to": "cris_huynh_2a52b5274", "strength": 0.9, "tags": ["close_friend_group"] },
+      { "to": "kristina_z_16412b2a7", "strength": 0.7, "tags": ["seneca_classmate"] },
+      { "to": "vladyslav_huziienko_57017a235", "strength": 0.55, "tags": ["seneca_classmate"] },
+      { "to": "sean-muniz-1b0b4a372", "strength": 0.6, "tags": ["seneca_program_cohort"] }
+    ]
   },
   {
     "id": "sean-muniz-1b0b4a372",
-    "text": "Name: Sean Muniz\nHeadline: Software Quality Assurance — Canadian Armed Forces | Seneca Polytechnic\nLocation: Scarborough, Ontario, Canada\n\nAbout: Software QA professional with a background from Seneca Polytechnic and experience tied to the Canadian Armed Forces. Focused on quality, reliability, and disciplined testing practices. Interested in applying structured QA to production systems.\n\nExperience:\n• Software Quality Assurance — Canadian Armed Forces / CAF-related environment, (Dates from LinkedIn)\n  Work: Execute test cases, document defects, support delivery of reliable software.\n• Student / Projects — Seneca Polytechnic\n  Work: Learned software testing, SDLC, and basic programming.\n\nEducation:\n• Seneca Polytechnic — Software/Technology program\n\nSkills: Software Testing; QA Documentation; Test Case Design; SDLC Basics; Teamwork; Attention to Detail; Communication."
+    "text": "Name: Sean Muniz\nHeadline: Software Quality Assurance — Canadian Armed Forces | Seneca Polytechnic\nLocation: Scarborough, Ontario, Canada\n\nAbout: Software QA professional with a background from Seneca Polytechnic and experience tied to the Canadian Armed Forces. Focused on quality, reliability, and disciplined testing practices. Interested in applying structured QA to production systems.\n\nExperience:\n• Software Quality Assurance — Canadian Armed Forces / CAF-related environment, (Dates from LinkedIn)\n  Work: Execute test cases, document defects, support delivery of reliable software.\n• Student / Projects — Seneca Polytechnic\n  Work: Learned software testing, SDLC, and basic programming.\n\nEducation:\n• Seneca Polytechnic — Software/Technology program\n\nSkills: Software Testing; QA Documentation; Test Case Design; SDLC Basics; Teamwork; Attention to Detail; Communication.",
+    "connections": [
+      { "to": "cris_huynh_2a52b5274", "strength": 0.9, "tags": ["close_friend_group"] },
+      { "to": "kristina_z_16412b2a7", "strength": 0.6, "tags": ["seneca_program_cohort"] },
+      { "to": "vladyslav_huziienko_57017a235", "strength": 0.6, "tags": ["seneca_program_cohort"] },
+      { "to": "maksym-volkovynskyi-802675271", "strength": 0.6, "tags": ["seneca_program_cohort"] }
+    ]
   },
   {
     "id": "sukhman-hara-1215602a4",
-    "text": "Name: Sukhman Hara\nHeadline: UI/UX Designer & Developer Intern | CS @ Seneca Polytechnic | Tech Enthusiast | Building for HR/AI (Stealth)\nLocation: Greater Toronto Area, Ontario, Canada\n\nAbout: Developer/designer hybrid studying Computer Science at Seneca. Builds UI-first web experiences, shares portfolio work (e.g. “Shara’s Island”), and interns for an AI-focused HR startup in stealth mode. Active in the Seneca community and engages with govtech/ops posts.\n\nExperience:\n• UI/UX Designer & Developer Intern — AI-focused HR Startup (Stealth), (Dates from LinkedIn)\n  Work: Design UI screens, implement frontend components, collaborate with founders on product direction.\n• CS Student Projects — Seneca Polytechnic\n  Work: Web pages, small apps, UI prototypes.\n\nEducation:\n• Seneca Polytechnic — Computer Science / Software-related program\n\nSkills: UI/UX Design; Figma/Prototyping; Frontend Development; HTML/CSS/JS; Responsive Design; Problem Solving; Communication; Team Collaboration."
+    "text": "Name: Sukhman Hara\nHeadline: UI/UX Designer & Developer Intern | CS @ Seneca Polytechnic | Tech Enthusiast | Building for HR/AI (Stealth)\nLocation: Greater Toronto Area, Ontario, Canada\n\nAbout: Developer/designer hybrid studying Computer Science at Seneca. Builds UI-first web experiences, shares portfolio work (e.g. “Shara’s Island”), and interns for an AI-focused HR startup in stealth mode. Active in the Seneca community and engages with govtech/ops posts.\n\nExperience:\n• UI/UX Designer & Developer Intern — AI-focused HR Startup (Stealth), (Dates from LinkedIn)\n  Work: Design UI screens, implement frontend components, collaborate with founders on product direction.\n• CS Student Projects — Seneca Polytechnic\n  Work: Web pages, small apps, UI prototypes.\n\nEducation:\n• Seneca Polytechnic — Computer Science / Software-related program\n\nSkills: UI/UX Design; Figma/Prototyping; Frontend Development; HTML/CSS/JS; Responsive Design; Problem Solving; Communication; Team Collaboration.",
+    "connections": [
+      { "to": "kristina_z_16412b2a7", "strength": 0.7, "tags": ["seneca_classmate"] },
+      { "to": "vladyslav_huziienko_57017a235", "strength": 0.6, "tags": ["seneca_classmate"] },
+      { "to": "sean-muniz-1b0b4a372", "strength": 0.65, "tags": ["seneca_classmate"] },
+      { "to": "maksym-volkovynskyi-802675271", "strength": 0.55, "tags": ["seneca_classmate"] },
+      { "to": "leilah-do-189017275", "strength": 0.9, "tags": ["siblings", "same_household"] }
+    ]
   },
   {
     "id": "binhduong21",
@@ -189,11 +312,22 @@
   },
   {
     "id": "phuong-linh-do-7057642a5",
-    "text": "Name: Phuong Linh Do\nHeadline: Marketing Student | Visual Storyteller | Creative Design Enthusiast | Seeking Opportunities in Branding & Digital Marketing\nLocation: Canada (Toronto/GTA)\n\nAbout: Marketing student passionate about visual storytelling, content creation, and brand-building. Interested in digital marketing roles (social, content, branding) and open to internships/co-op. Portfolio likely includes social-media style posts and student projects.\n\nExperience:\n• Student Marketing / Content Projects — (College/University), (Dates)\n  Work: Create visual assets, social media captions, assist in campaign ideas.\n• Freelance/Volunteer Creative Work — (Dates)\n  Work: Design simple graphics, help with brand presence.\n\nEducation:\n• (Canadian college/university) — Marketing / Business (from LinkedIn)\n\nSkills: Digital Marketing; Content Creation; Social Media; Canva/Design Tools; Branding Basics; Communication; Organization."
+    "text": "Name: Phuong Linh Do\nHeadline: Marketing Student | Visual Storyteller | Creative Design Enthusiast | Seeking Opportunities in Branding & Digital Marketing\nLocation: Canada (Toronto/GTA)\n\nAbout: Marketing student passionate about visual storytelling, content creation, and brand-building. Interested in digital marketing roles (social, content, branding) and open to internships/co-op. Portfolio likely includes social-media style posts and student projects.\n\nExperience:\n• Student Marketing / Content Projects — (College/University), (Dates)\n  Work: Create visual assets, social media captions, assist in campaign ideas.\n• Freelance/Volunteer Creative Work — (Dates)\n  Work: Design simple graphics, help with brand presence.\n\nEducation:\n• (Canadian college/university) — Marketing / Business (from LinkedIn)\n\nSkills: Digital Marketing; Content Creation; Social Media; Canva/Design Tools; Branding Basics; Communication; Organization.",
+    "connections": [
+      { "to": "leilah-do-189017275", "strength": 0.9, "tags": ["sibling"] },
+      { "to": "jay_vakil_kpmg_19ab7da3", "strength": 0.4, "tags": ["connection"] },
+      { "to": "cris_huynh_2a52b5274", "strength": 0.5, "tags": ["connection"] }
+    ]
   },
   {
     "id": "leilah-do-189017275",
-    "text": "Name: Leilah Do\nHeadline: Marketing Student — Seneca Polytechnic | Event Planning & Digital Marketing Enthusiast | HELIX Entrepreneur Assistant | Creative Development Lead @ Seneca Marketing Club\nLocation: Toronto, Ontario, Canada\n\nAbout: Marketing student at Seneca who is active in campus initiatives. Passionate about event planning, social media, and supporting student entrepreneurship via HELIX. Also helps with creative development for the Seneca Marketing Club. Looking to grow in branding and digital roles.\n\nExperience:\n• HELIX Entrepreneur Assistant — Seneca Works / Seneca Polytechnic, (Dates from LinkedIn)\n  Work: Support student entrepreneurs, help coordinate activities, assist with communications.\n• Creative Development Lead — Seneca Marketing Club, (Dates)\n  Work: Create marketing materials, collaborate on social campaigns, support club events.\n• Event Planning / Campus Involvement — Seneca, (Dates)\n  Work: Assist in planning and promoting campus events.\n\nEducation:\n• Seneca Polytechnic — Marketing (in progress)\n\nSkills: Digital Marketing; Event Planning; Social Media Content; Canva/Design; Communication; Teamwork; Stakeholder Coordination."
+    "text": "Name: Leilah Do\nHeadline: Marketing Student — Seneca Polytechnic | Event Planning & Digital Marketing Enthusiast | HELIX Entrepreneur Assistant | Creative Development Lead @ Seneca Marketing Club\nLocation: Toronto, Ontario, Canada\n\nAbout: Marketing student at Seneca who is active in campus initiatives. Passionate about event planning, social media, and supporting student entrepreneurship via HELIX. Also helps with creative development for the Seneca Marketing Club. Looking to grow in branding and digital roles.\n\nExperience:\n• HELIX Entrepreneur Assistant — Seneca Works / Seneca Polytechnic, (Dates from LinkedIn)\n  Work: Support student entrepreneurs, help coordinate activities, assist with communications.\n• Creative Development Lead — Seneca Marketing Club, (Dates)\n  Work: Create marketing materials, collaborate on social campaigns, support club events.\n• Event Planning / Campus Involvement — Seneca, (Dates)\n  Work: Assist in planning and promoting campus events.\n\nEducation:\n• Seneca Polytechnic — Marketing (in progress)\n\nSkills: Digital Marketing; Event Planning; Social Media Content; Canva/Design; Communication; Teamwork; Stakeholder Coordination.",
+    "connections": [
+      { "to": "phuong-linh-do-7057642a5", "strength": 0.9, "tags": ["sibling"] },
+      { "to": "sukhman-hara-1215602a4", "strength": 0.9, "tags": ["same_household", "close_friend_group"] },
+      { "to": "cris_huynh_2a52b5274", "strength": 0.4, "tags": ["connection"] },
+      { "to": "jay_vakil_kpmg_19ab7da3", "strength": 0.5, "tags": ["connection"] }
+    ]
   },
   {
     "id": "sophia_tran_rbc_dev",
@@ -265,7 +399,14 @@
   },
   {
     "id": "selena_wong_rbc_ta",
-    "text": "Name: Selena Wong\nHeadline: Campus Talent Acquisition Partner — RBC\nLocation: Toronto, Ontario, Canada\n\nAbout: I recruit students and new grads for RBC tech and business roles. I run info sessions, screen resumes, and work with hiring managers.\n\nExperience:\n• Campus TA Partner — RBC, 2022–Present\n• HR Coordinator — Financial Services, 2020–2022\n\nEducation:\n• York University — BA, Human Resources\n\nSkills: Talent Acquisition; Campus Recruiting; Interviewing; Employer Branding; Event Planning."
+    "text": "Name: Selena Wong\nHeadline: Campus Talent Acquisition Partner — RBC\nLocation: Toronto, Ontario, Canada\n\nAbout: I recruit students and new grads for RBC tech and business roles. I run info sessions, screen resumes, and work with hiring managers.\n\nExperience:\n• Campus TA Partner — RBC, 2022–Present\n• HR Coordinator — Financial Services, 2020–2022\n\nEducation:\n• York University — BA, Human Resources\n\nSkills: Talent Acquisition; Campus Recruiting; Interviewing; Employer Branding; Event Planning.",
+    "conncetions" : [
+      { "to": "sophia_tran_rbc_dev", "strength": 0.9, "tags": ["same_company_rbc"] },
+      { "to": "yukti-mulani-311459218", "strength": 0.85, "tags": ["same_company_rbc"] },
+      { "to": "asalseti", "strength": 0.8, "tags": ["same_company_rbc"] },
+      { "to": "krins", "strength": 0.8, "tags": ["same_company_rbc"] },
+      { "to": "christietangdev", "strength": 0.75, "tags": ["same_company_rbc"] }
+    ]
   },
   {
     "id": "devon_miles_bmo_fe",
@@ -576,8 +717,12 @@
     "text": "Name: Ryan Cole\nHeadline: Engineering Manager — Meta | Reels & Video\nLocation: New York, NY, United States\n\nAbout: I lead teams building video creation and editing experiences. I partner with product and design to ship features fast at scale.\n\nExperience:\n• Engineering Manager — Meta, 2022–Present\n• Senior Software Engineer — Meta, 2018–2022\n• Software Engineer — Microsoft, 2014–2018\n\nEducation:\n• MIT — BS, Computer Science\n\nSkills: People Leadership; Product Engineering; Mobile (iOS/Android); Cross-Functional Collaboration."
   },
   {
-    "id": "pwc_partner_candidate_01",
-    "text": "Name: Amanda Li\nHeadline: Director, Deals & Valuations — PwC Canada (Partner Track)\nLocation: Toronto, Ontario, Canada\n\nAbout: Director in PwC’s Deals practice delivering valuations, financial modeling, and transaction support for mid-market and FS clients. Leading teams, managing clients, and building sector knowledge.\n\nExperience:\n• Director, Deals & Valuations — PwC, 2021–Present\n• Senior Manager — PwC, 2018–2021\n• Manager — PwC, 2015–2018\n\nEducation:\n• CPA, CA\n• University of Waterloo — MAcc\n\nSkills: Valuation; Financial Modeling; Client Relationship Management; People Development."
+    "id": "amanda_li_pwc_2712xx91",
+    "text": "Name: Amanda Li\nHeadline: Director, Deals & Valuations — PwC Canada\nLocation: Toronto, Ontario, Canada\n\nAbout: Director in Deals & Valuations with expertise in financial modeling, client advisory, and transaction support.\n\nExperience:\n• Director — PwC Canada\n  Work: Deal advisory, corporate valuation, financial modeling.\n\nEducation:\n• University of Waterloo\n\nSkills: Valuation; Financial Modeling; Client Relationship Management; People Development.",
+    "connections": [
+      { "to": "cris_huynh_2a52b5274", "strength": 0.2, "tags": ["industry_event_connection"] },
+      { "to": "jay_vakil_kpmg_19ab7da3", "strength": 0.4, "tags": ["cross_firm_project_partner"] }
+    ]
   },
   {
     "id": "deloitte_partner_01",

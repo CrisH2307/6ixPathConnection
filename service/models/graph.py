@@ -1,53 +1,122 @@
 import networkx as nx
 import pandas as pd
 try:
-    from .normalization import enrich_person, rule_skill_sim
+    from .normalization import enrich_person, rule_skill_sim, COMPANY_AFFINITY, seniority_gap_score
 except ImportError:
-    from normalization import enrich_person, rule_skill_sim
+    from normalization import enrich_person, rule_skill_sim, COMPANY_AFFINITY, seniority_gap_score
 
-W_SKILL = 0.9
+W_SKILL = 0.6
 W_SCHOOL = 0.05
 W_COMPANY = 0.05
-SIM_THRES = 0.4
+W_RELATION = 0.2
+W_COMPANY_AFF = 0.07
+W_SENIORITY_GAP = 0.03
+
 
 def same_school(a,b):  return int(a["school"]  == b["school"])
 def same_company(a,b): return int(a["company"] == b["company"])
+def company_affiliation(a,b):
+    ca = (a.get("company") or "").strip().lower()
+    cb = (b.get("company") or "").strip().lower()
+    if not ca or not cb:
+        return 0.0
+    key = tuple(sorted([ca, cb]))
+    return COMPANY_AFFINITY.get(key, 0.0)
 
-def edge_weight(a,b):
-    s = rule_skill_sim(a,b)
-    return W_SKILL*s + W_SCHOOL*same_school(a,b) + W_COMPANY*same_company(a,b)
+def relationship_strength(a, b, rel_index: dict) -> float:
+    key = tuple(sorted([a["_id"], b["_id"]]))
+    return rel_index.get(key, 0.0)
 
-def should_link(a,b):
+def edge_weight(a, b, rel_index: dict) -> float:
+    s_skill = rule_skill_sim(a, b)
+    s_sch  = same_school(a, b)
+    s_comp = same_company(a, b)
+    s_rel  = relationship_strength(a, b, rel_index)
+    s_aff  = company_affiliation(a, b)
+    s_gap  = seniority_gap_score(a, b)
+
+    score = (
+        W_SKILL        * s_skill +
+        W_SCHOOL       * s_sch +
+        W_COMPANY      * s_comp +
+        W_RELATION     * s_rel +
+        W_COMPANY_AFF  * s_aff +
+        W_SENIORITY_GAP* s_gap
+    )
+    # Clip to [0, 1.5] just for sanity (not strictly required)
+    return max(0.0, min(score, 1.5))
+
+def should_link(a, b, rel_index: dict) -> bool:
     shared_skills = len(set(a["skills_norm"]) & set(b["skills_norm"]))
-    # print("Shared skills between", a["name"], "and", b["name"], ":", shared_skills)
+    rel = relationship_strength(a, b, rel_index)
+    aff = company_affiliation(a, b)
+
+    # Strong relationship alone can justify an edge
+    if rel >= 0.7:
+        return True
+
+    # Otherwise, require reasonable overlap
     return (
         shared_skills >= 3
-        or (shared_skills >= 0 and same_company(a, b))
-        or (shared_skills >= 2 and same_school(a, b))
+        or (same_company(a, b) and shared_skills >= 1)
+        or (same_school(a, b) and shared_skills >= 2)
+        or (aff >= 0.6 and shared_skills >= 1)  # strong company partnership + at least 1 shared skill
     )
+
+
+def build_relationship_strength_index(people: list[dict]) -> dict:
+    """
+    Returns dict[(id1, id2)] -> strength in [0,1],
+    where (id1,id2) is a sorted tuple of person IDs.
+    """
+    rel = {}
+    for p in people:
+        pid = p.get("_id")
+        if not pid:
+            continue
+        for c in p.get("connections", []):
+            to_id = c.get("to")
+            strength = float(c.get("strength", 0.0))
+            if not to_id or strength <= 0:
+                continue
+            key = tuple(sorted([pid, to_id]))
+            # if both sides define it, take max
+            rel[key] = max(rel.get(key, 0.0), strength)
+    return rel
 
 def build_graph(people: list[dict]) -> nx.Graph:
     G = nx.Graph()
     by_id = {}
+    # 1) enrich and add nodes
     for p in people:
         ep = enrich_person(p)
-        by_id[ep["_id"]] = ep
-        G.add_node(ep["_id"], **ep)
+        pid = ep["_id"]
+        by_id[pid] = ep
+        G.add_node(pid, **ep)
 
+    # 2) precompute relationship index
+    rel_index = build_relationship_strength_index(people)
+
+    # 3) add edges from similarity + relationships
     ids = list(by_id.keys())
     for i in range(len(ids)):
         for j in range(i+1, len(ids)):
             a, b = by_id[ids[i]], by_id[ids[j]]
-            if should_link(a,b):
-                G.add_edge(a["_id"], b["_id"],
-                           weight=edge_weight(a,b),
-                           signals={
-                               "skill_similarity": round(rule_skill_sim(a,b),3),
-                               "same_school": bool(same_school(a,b)),
-                               "same_company": bool(same_company(a,b)),
-                               "categories_a": a["categories"],
-                               "categories_b": b["categories"],
-                           })
+            if should_link(a, b, rel_index):
+                G.add_edge(
+                    a["_id"], b["_id"],
+                    weight=edge_weight(a, b, rel_index),
+                    signals={
+                        "skill_similarity": round(rule_skill_sim(a, b), 3),
+                        "same_school": bool(same_school(a, b)),
+                        "same_company": bool(same_company(a, b)),
+                        "relationship_strength": round(relationship_strength(a, b, rel_index), 3),
+                        "company_affinity": round(company_affiliation(a, b), 3),
+                        "seniority_gap_score": round(seniority_gap_score(a, b), 3),
+                        "categories_a": a["categories"],
+                        "categories_b": b["categories"],
+                    }
+                )
     return G
 
 

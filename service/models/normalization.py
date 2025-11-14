@@ -168,6 +168,41 @@ SKILL_TO_BUCKET = {
     "mode": "analytics_bi",
 }
 
+COMPANY_AFFINITY = {
+    ("kpmg canada", "microsoft"): 0.7,
+    ("pwc canada", "aws"): 0.6,
+    ("pwc canada", "formula 1"): 0.5,
+    ("kpmg canada", "pwc canada"): 0.4,
+}
+
+SENIORITY_LEVEL = {
+    "Student/Intern": 0,
+    "Entry": 1,
+    "Mid": 2,
+    "Senior": 3,
+    "Lead/Staff": 4,
+    "Manager+": 5,
+    "Founder": 6,
+    "Other": 2,
+}
+
+'''Seniority gap (simple numeric score)'''
+def seniority_gap_score(a, b) -> float:
+    sa = SENIORITY_LEVEL.get(a.get("seniority"), 2)
+    sb = SENIORITY_LEVEL.get(b.get("seniority"), 2)
+    gap = abs(sa - sb)  # 0..maybe 6
+    # we want: small gap -> positive, huge gap -> negative or small
+    if gap == 0:
+        return 1.0
+    elif gap == 1:
+        return 0.7
+    elif gap == 2:
+        return 0.4
+    elif gap == 3:
+        return 0.2
+    else:
+        return 0.1
+
 """lowercase, remove punctuation/variants (e.g., react.js -> react)"""
 def normalize_skill(s):
     s = s.strip().lower()
