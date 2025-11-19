@@ -96,7 +96,7 @@ Fruchterman-Reingold algorithm is simply a clever method for neatly drawing diag
 
 + The layout helps people instantly see the structure of your dataset:
   + Clusters like “RBC Developers,” “Seneca Alumni,” or “Data/AI People.”
-  + Bridges between groups — people who link two communities.
+  + Bridges between groups with people who link two communities.
   + Strong ties vs. weak ties at a glance.
   + Outliers who are isolated or unique.
 
