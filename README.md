@@ -83,7 +83,8 @@ The system uses a combination of:
 + (https://networkx.org/documentation/networkx-1.11/reference/generated/networkx.drawing.layout.fruchterman_reingold_layout.html)
 + (https://noesis.ikor.org/wiki/algorithms/visualization#h.p_d8oCA05tzRbA)
 
-**Fruchterman-Reingold** is a force-directed graph drawing algorithm that visually represents networks by simulating a physical system where nodes are connected by springs
+**Fruchterman-Reingold** is a force-directed graph drawing algorithm that visually represents networks by simulating a physical system where nodes are connected by springs. The
+Fruchterman-Reingold algorithm is simply a clever method for neatly drawing diagrams that show how things are connected. Imagine the dots in the diagram are little magnets and springs. The springs pull connected dots together, while the magnets push all dots away from each other so they don't bunch up. The algorithm repeatedly adjusts the position of every dot based on these pulling and pushing forces, starting from a random mess and slowly calming the movement until the whole picture becomes a stable, clear map of the network. This makes it easy to look at the picture and instantly understand complex relationships, like who is friends with whom in a social group
 
 ![Graph Overview](https://www.researchgate.net/publication/301217160/figure/fig9/AS:359956277678080@1462831674860/Force-directed-layout-Fruchterman-Reingold-algorithm-of-an-example-ground-truth-network.png)
 
