@@ -9,6 +9,8 @@ from pydantic import BaseModel, Field, ValidationError, ConfigDict
 from openai import OpenAI
 from dotenv import load_dotenv
 from models.graph import build_graph, shortest_paths_ranked
+from models.embedding import _ensure_embeddings, _cosine_sim
+import numpy as np
 
 # ---------- Storage ----------
 BASE_DIR = Path(__file__).resolve().parent
@@ -56,6 +58,13 @@ class IngestIn(BaseModel):
 class RouteRequest(BaseModel):  
     source_name: str = Field(..., description="Source person name, e.g. 'Cris Huynh'")
     target_name: str = Field(..., description="Target person name, e.g. 'Khoi Vu'")
+
+
+# ---------- Embedding ----------    
+class SimilarPeopleRequest(BaseModel):
+    source_name: str = Field(..., description="Name of the person to compare from")
+    top_k: int = Field(10, ge=1, le=50, description="How many similar people to return")
+
 
 load_dotenv() # Load environment variables from .env file
 
@@ -356,3 +365,51 @@ def generate_routes(payload: RouteRequest):
         "paths": topk,               
     }
 
+@app.post("/similar-people")
+def similar_people(payload: SimilarPeopleRequest):
+    """
+    Given a source_name, return top-k most similar people based on embeddings.
+    """
+    print("loading people and embeddings...")
+    people = _load_people()
+    if not people:
+        raise HTTPException(status_code=400, detail="No people in database.")
+
+    # Ensure embeddings exist
+    people = _ensure_embeddings(people)
+
+    # Build name index
+    name_to_person = {}
+    for p in people:
+        name = (p.get("name") or "").strip().lower()
+        if name:
+            name_to_person[name] = p
+
+    src_key = payload.source_name.strip().lower()
+    if src_key not in name_to_person:
+        raise HTTPException(status_code=404, detail=f"Person '{payload.source_name}' not found")
+
+    src_person = name_to_person[src_key]
+    src_vec = np.array(src_person["embedding"], dtype=float)
+
+    # Compute similarities to everyone else
+    sims = []
+    for p in people:
+        if p is src_person:
+            continue
+        vec = np.array(p["embedding"], dtype=float)
+        sim = _cosine_sim(src_vec, vec)
+        sims.append({
+            "score": sim,
+            "name": p.get("name", ""),
+            "company": p.get("company", ""),
+            "role": p.get("role", ""),
+        })
+
+    # Sort by similarity
+    sims.sort(key=lambda x: x["score"], reverse=True)
+
+    return {
+        "source_name": src_person.get("name", ""),
+        "results": sims[:payload.top_k],
+    }

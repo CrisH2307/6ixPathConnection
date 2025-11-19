@@ -10,6 +10,8 @@ import {
   ListGroup,
   Badge,
 } from "react-bootstrap";
+import { Routes, Route } from "react-router-dom";
+import SimilarPeople from "./pages/SimilarPeople";
 
 function App() {
   const [sourceName, setSourceName] = useState("");
@@ -58,6 +60,7 @@ function App() {
   const categories_a = firstHop?.signals?.categories_a ?? [];
   const categories_b = firstHop?.signals?.categories_b ?? [];
   const pathDetails = firstPath?.hops_detail || [];
+  const allPaths = result?.paths ?? [];
   const nodeLookup = useMemo(() => {
     if (!firstPath?.nodes_detail) return {};
     return firstPath.nodes_detail.reduce((acc, node) => {
@@ -94,6 +97,10 @@ function App() {
   console.log(result);
 
   return (
+    <>
+    <Routes>
+      <Route path="/similar" element={<SimilarPeople />} />
+    </Routes>
     <Container className="py-4">
       <Row className="justify-content-center">
         <Col md={8} lg={6}>
@@ -262,9 +269,56 @@ function App() {
               </Card.Body>
             </Card>
           )}
+
+          {allPaths.length > 0 && (
+            <Card className="mt-3">
+              <Card.Body>
+                <Card.Title>All paths</Card.Title>
+                <ListGroup>
+                  {allPaths.map((pathOption, idx) => {
+                    const lookup = (pathOption.nodes_detail || []).reduce(
+                      (acc, node) => {
+                        if (node?._id) acc[node._id] = node;
+                        return acc;
+                      },
+                      {}
+                    );
+                    const labels = pathOption.nodes.map(
+                      (nodeId) =>
+                        lookup[nodeId]?.name || lookup[nodeId]?.id || nodeId
+                    );
+                    return (
+                      <ListGroup.Item key={`path-${idx}`} className="py-3">
+                        <div className="d-flex justify-content-between flex-wrap">
+                          <span className="fw-bold">Path {idx + 1}</span>
+                          <span className="text-muted">
+                            {pathOption.hops} hops · Score {" "}
+                            {typeof pathOption.score === "number"
+                              ? pathOption.score.toFixed(2)
+                              : pathOption.score}
+                          </span>
+                        </div>
+                        <div className="small text-muted mt-2">
+                          {labels.map((label, labelIdx) => (
+                            <span key={`${label}-${labelIdx}`}>
+                              {label}
+                              {labelIdx < labels.length - 1 && (
+                                <span className="mx-1">→</span>
+                              )}
+                            </span>
+                          ))}
+                        </div>
+                      </ListGroup.Item>
+                    );
+                  })}
+                </ListGroup>
+              </Card.Body>
+            </Card>
+          )}
         </Col>
       </Row>
     </Container>
+    </>
   );
 }
 
