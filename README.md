@@ -46,16 +46,15 @@ This project is grounded in published research showing that:
   + Mentorship and structured support greatly increase confidence and opportunities.
 
 The system uses a combination of:
-**1. Natural Language Processing:**
+### 1. Natural Language Processing:
   + The system uses NLP to turn messy, unstructured text into clean, machine-readable data. Users usually paste job descriptions or profile text full of sentences, bullet points, and mixed formatting. NLP is used to extract the important parts: `name, company, role, schools, skills, and keywords` and convert them into structured fields we can use inside the graph.
   + This step removes noise, deduplicates skills, normalizes school/company names, and prepares each person as a consistent “node” in the network. Without NLP, the graph cannot be built because the system wouldn’t know what a person’s background actually contains.
 
-**2. Large Language Model (LLM) for Understanding & Message Generation:**
-#### We used LLM for:
+### 2. Large Language Model (LLM) for Understanding & Message Generation:
   + Understanding when it reads a pasted profile or resume and converts it into structured JSON using a strict schema. The LLM helps interpret unclear titles, detect seniority, or merge synonymous skills.
   + Message Generation: For each hop in the connection path, the system uses the LLM to draft personalized outreach messages. Instead of generic templates, the LLM writes context-aware messages (e.g., referencing shared school, similar tech stack, or mutual friends) that feel natural and respectful. This improves reply rates and reduces social anxiety for early-career users.
 
-**3. Graph Data Structures and Algorithms - inspired by Open Source Library [NetworkX](https://networkx.org/):**
+### 3. Graph Data Structures and Algorithms - inspired by Open Source Library [NetworkX](https://networkx.org/):
   + We represent the user’s networking system using a weighted undirected graph built with NetworkX.
   + Each node is a person (student, alumni, engineer, manager).
   + Each edge represents a potential connection based on shared schools, companies, skills, or explicit relationship links (e.g., “close friend”, “same team”).
@@ -78,7 +77,7 @@ The system uses a combination of:
 	      + Among all shortest paths, we compute a score = sum of edge weights (shared skills, school match, company match, relationship strength, and connections strength).
 	      + This prioritizes paths that are not only short, but also strongest, warmest, and most realistic in a real networking context.
     
-**4. Fruchterman–Reingold Force-Directed Layout (Graph Visualization):**
+### 4. Fruchterman–Reingold Force-Directed Layout (Graph Visualization):
 #### Resources
 + (https://en.wikipedia.org/wiki/Force-directed_graph_drawing)
 + (https://networkx.org/documentation/networkx-1.11/reference/generated/networkx.drawing.layout.fruchterman_reingold_layout.html)
@@ -100,7 +99,7 @@ The system uses a combination of:
   + Strong ties vs. weak ties at a glance.
   + Outliers who are isolated or unique.
 
-**5. Embeddings for Semantic Similarity:**
+### 5. Embeddings for Semantic Similarity:
 + Embeddings turn texts, like a person’s skills, job role, or bio, into a numeric vector that represents meaning, not just keywords. This lets the system understand relationships that aren’t obvious from the raw text.
 + For example, “backend engineer,” “Node.js developer,” and “API developer” will appear close together in vector space even though the words differ.
 + Using OpenAI’s text-embedding-3-small, we compute similarity between people in a consistent, mathematical way. These similarity scores:
