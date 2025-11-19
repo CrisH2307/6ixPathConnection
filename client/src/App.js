@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -9,6 +9,7 @@ import {
   Alert,
   ListGroup,
   Badge,
+  Modal,
 } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import SimilarPeople from "./pages/SimilarPeople";
@@ -20,6 +21,11 @@ function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [path, setPath] = useState(100);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedStep, setSelectedStep] = useState(null);
+  const [routeId, setRouteId] = useState(null);
+  const [hopsProgress, setHopsProgress] = useState([]);
+  const [copied, setCopied] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,10 +63,13 @@ function App() {
       ? firstPath.hops_detail[0]
       : null;
   const signals = firstHop?.signals || {};
-  const categories_a = firstHop?.signals?.categories_a ?? [];
-  const categories_b = firstHop?.signals?.categories_b ?? [];
+  //const categories_a = firstHop?.signals?.categories_a ?? [];
+  //const categories_b = firstHop?.signals?.categories_b ?? [];
   const pathDetails = firstPath?.hops_detail || [];
   const allPaths = result?.paths ?? [];
+  const outreachSequence = firstPath?.outreach_sequence || [];
+  
+
   const nodeLookup = useMemo(() => {
     if (!firstPath?.nodes_detail) return {};
     return firstPath.nodes_detail.reduce((acc, node) => {
@@ -94,6 +103,173 @@ function App() {
     return reasons;
   };
 
+  useEffect(() => {
+    if (!result?.paths || !result.paths.length) {
+      setRouteId(null);
+      setHopsProgress([]);
+      return;
+    }
+
+    const rid = buildRouteId(sourceName, targetName);
+    const bestPath = result.paths[0];
+    const hops = bestPath.hops_detail || [];
+
+    if (!rid || !hops.length) {
+      setRouteId(rid);
+      setHopsProgress([]);
+      return;
+    }
+
+    const defaultProgress = hops.map((hop, index) => ({
+      step: index + 1,
+      recipientId: hop.to,
+      status: "not_started",
+    }));
+
+    const loaded = loadProgress(rid, defaultProgress);
+      setRouteId(rid);
+      setHopsProgress(loaded);
+  }, [result, sourceName, targetName]);
+
+  const handleOpenModal = (index) => {
+    const stepData = outreachSequence[index];
+    const hop = pathDetails[index];
+
+    const senderName =
+      result?.source_name ||
+      (stepData?.sender_id ? displayName(stepData.sender_id) : sourceName || "You");
+
+    const fallbackRecipientId = hop ? hop.to : null;
+    const recipientName = stepData?.recipient_id
+      ? displayName(stepData.recipient_id)
+      : fallbackRecipientId
+      ? displayName(fallbackRecipientId)
+      : "Recipient";
+
+    const warmIntroName = stepData?.warm_intro_id
+      ? displayName(stepData.warm_intro_id)
+      : null;
+
+    const stepProgress = hopsProgress[index] || {
+      step: index + 1,
+      status: "not_started",
+    };
+
+    setSelectedStep({
+      index,
+      stepNumber: stepProgress.step ?? index + 1,
+      senderName,
+      recipientName,
+      warmIntroName,
+      message: stepData?.message || "",
+      status: stepProgress.status || "not_started",
+    });
+    setCopied(false);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedStep(null);
+    setCopied(false); 
+  };
+
+  const handleSaveStep = () => {
+    if (!selectedStep) return;
+
+    const idx = selectedStep.index;
+
+    setHopsProgress((prev) => {
+      const next = [...prev];
+
+      const existing = next[idx] || {
+        step: idx + 1,
+        recipientId: pathDetails[idx]?.to,
+        status: "not_started",
+      };
+
+      next[idx] = {
+        ...existing,
+        status: selectedStep.status,
+      };
+
+      saveProgress(routeId, next);
+      return next;
+    });
+
+    // Close modal after saving
+    setShowModal(false);
+    setSelectedStep(null);
+  };
+
+
+  const handleCopyMessage = async () => {
+    if (!selectedStep?.message) return;
+    try {
+      await navigator.clipboard.writeText(selectedStep.message);
+      setCopied(true);
+      // optional: auto-reset after 2 seconds
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy message", err);
+    }
+  };
+
+  const handleSelectedStatusChange = (newStatus) => {
+    if (!selectedStep) return;
+    setSelectedStep((prev) => ({ ...prev, status: newStatus }));
+  };
+
+  const STATUS_OPTIONS = [
+    { value: "not_started", label: "Not started" },
+    { value: "sent", label: "Sent" },
+    { value: "waiting_reply", label: "Waiting reply" },
+    { value: "done", label: "Done" },
+    { value: "skipped", label: "Skipped" },
+  ];
+
+  const statusVariantMap = {
+    not_started: "secondary",
+    sent: "info",
+    waiting_reply: "warning",
+    done: "success",
+    skipped: "dark",
+  };
+
+  const buildRouteId = (source, target) => {
+    const s = (source || "").trim().toLowerCase();
+    const t = (target || "").trim().toLowerCase();
+    if (!s || !t) return null;
+    return `${s}->${t}`;
+  };
+
+  const loadProgress = (routeId, defaultProgress) => {
+    if (!routeId) return defaultProgress;
+    try {
+      const raw = window.localStorage.getItem(`route-progress:${routeId}`);
+      if (!raw) return defaultProgress;
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length === defaultProgress.length) {
+        return parsed;
+      }
+    } catch (err) {
+      console.error("Failed to load progress from localStorage", err);
+    }
+    return defaultProgress;
+  };
+
+  const saveProgress = (routeId, progress) => {
+    if (!routeId) return;
+    try {
+      window.localStorage.setItem(
+        `route-progress:${routeId}`,
+        JSON.stringify(progress)
+      );
+    } catch (err) {
+      console.error("Failed to save progress to localStorage", err);
+    }
+  };
+
   console.log(result);
 
   return (
@@ -103,7 +279,7 @@ function App() {
     </Routes>
     <Container className="py-4">
       <Row className="justify-content-center">
-        <Col md={8} lg={6}>
+        <Col xs={12} md={12} lg={12} xl={10}>
           <h1 className="mb-4 text-center">6ixPathConnection</h1>
 
           {/* Form card */}
@@ -160,10 +336,16 @@ function App() {
                     <ListGroup>
                       {pathDetails.map((hop, index) => {
                         const reasons = describeSignals(hop.signals);
+                        const progressForHop = hopsProgress[index] || { status: "not_started" };
+                        const statusOption =
+                          STATUS_OPTIONS.find((opt) => opt.value === progressForHop?.status) ||
+                          STATUS_OPTIONS[0];
                         return (
                           <ListGroup.Item
                             key={`${hop.from}-${hop.to}-${index}`}
                             className="py-3"
+                            action
+                            onClick={() => handleOpenModal(index)}
                           >
                             <div className="d-flex align-items-center flex-wrap mb-2">
                               <span className="fw-bold me-2">Step {index + 1}</span>
@@ -175,6 +357,15 @@ function App() {
                                   Weight {hop.edge_weight.toFixed(2)}
                                 </Badge>
                               )}
+                              <Badge
+                                bg={
+                                  statusVariantMap[progressForHop?.status] ||
+                                  statusVariantMap.not_started
+                                }
+                                className="ms-3"
+                              >
+                                {statusOption.label}
+                              </Badge>
                             </div>
                             <div className="small text-muted">
                               {reasons.map((reason) => (
@@ -186,6 +377,9 @@ function App() {
                                   {reason}
                                 </Badge>
                               ))}
+                            </div>
+                            <div className="mt-2 small text-muted">
+                              Click to view message & update status
                             </div>
                           </ListGroup.Item>
                         );
@@ -208,13 +402,14 @@ function App() {
 
                 {firstHop && (
                   <>
+                    {/*
                     <p className="mb-2">
                       <strong>Skill similarity:</strong>{" "}
                       {typeof signals.skill_similarity === "number"
                         ? signals.skill_similarity.toFixed(2)
                         : signals.skill_similarity ?? "N/A"}
                     </p>
-
+                    
                     <div className="mb-2">
                       {signals.same_school && (
                         <Badge bg="secondary" className="me-1">
@@ -232,7 +427,8 @@ function App() {
                         </Badge>
                       )}
                     </div>
-
+                    */}
+                    {/*
                     <div className="mb-2">
                       <strong>Categories_A:</strong>{" "}
                       {categories_a.length ? (
@@ -245,7 +441,7 @@ function App() {
                         <span className="text-muted">None</span>
                       )}
                     </div>
-
+                    
                     <div>
                       <strong>Categories_B:</strong>{" "}
                       {categories_b.length ? (
@@ -258,6 +454,7 @@ function App() {
                         <span className="text-muted">None</span>
                       )}
                     </div>
+                    */}
                   </>
                 )}
 
@@ -318,6 +515,79 @@ function App() {
         </Col>
       </Row>
     </Container>
+
+    {/* Modal for outreach message */}
+    <Modal show={showModal} onHide={handleCloseModal} centered size="lg">
+      <Modal.Header closeButton>
+        <Modal.Title>
+          Outreach message – Step {selectedStep?.stepNumber}
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {selectedStep ? (
+          <>
+            <p className="mb-2">
+              <strong>From:</strong> {selectedStep.senderName}
+              <br />
+              <strong>To:</strong> {selectedStep.recipientName}
+            </p>
+            {selectedStep.warmIntroName && (
+              <p className="mb-2 text-muted">
+                Mentions warm intro: {selectedStep.warmIntroName}
+              </p>
+            )}
+
+            <Form.Group className="mb-3" controlId="statusSelect">
+              <Form.Label className="fw-semibold">Step status</Form.Label>
+              <Form.Select
+                value={selectedStep.status}
+                onChange={(e) => handleSelectedStatusChange(e.target.value)}
+              >
+                {STATUS_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </Form.Select>
+            </Form.Group>
+
+            <hr />
+            <div className="d-flex justify-content-between align-items-center mb-2">
+              <Form.Label className="fw-semibold mb-0">
+                Suggested outreach message
+              </Form.Label>
+
+              <Button
+                variant={"outline-secondary"}
+                onClick={handleCopyMessage}
+                disabled={!selectedStep?.message}
+              >
+                {copied ? "Copied" : "Copy message"}
+              </Button>
+            </div>
+
+            <p style={{ whiteSpace: "pre-wrap" }}>{selectedStep.message}</p>
+
+          </>
+        ) : (
+          <p className="mb-0 text-muted">
+            No outreach message available for this step.
+          </p>
+        )}
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={handleCloseModal}>
+          Close
+        </Button>
+        <Button
+          variant="primary"
+          onClick={handleSaveStep}
+          disabled={!selectedStep}
+        >
+          Save Status
+        </Button>
+      </Modal.Footer>
+    </Modal>
     </>
   );
 }

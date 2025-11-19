@@ -10,6 +10,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from models.graph import build_graph, shortest_paths_ranked
 from models.embedding import _ensure_embeddings, _cosine_sim
+from typing import List, Literal, Optional, Dict, Any
 import numpy as np
 
 # ---------- Storage ----------
@@ -51,14 +52,12 @@ class ProfileOut(BaseModel):
         description="Explicit graph edges to other people, if provided"
     )
     
-
 class IngestIn(BaseModel):
     people: List[ProfileOut]
 
 class RouteRequest(BaseModel):  
     source_name: str = Field(..., description="Source person name, e.g. 'Cris Huynh'")
     target_name: str = Field(..., description="Target person name, e.g. 'Khoi Vu'")
-
 
 # ---------- Embedding ----------    
 class SimilarPeopleRequest(BaseModel):
@@ -144,7 +143,259 @@ SYSTEM_PROMPT = """You extract structured profile data from raw, pasted LinkedIn
   Otherwise -> "Other"
 """
 
+def _normalize_set(v) -> set:
+    if not v:
+        return set()
+    if not isinstance(v, list):
+        v = [v]
+    return {str(x).strip().lower() for x in v if str(x).strip()}
+
+
+def _describe_shared_profile(source: Dict[str, Any], recipient: Dict[str, Any]) -> str:
+    """
+    Build a human-readable description of the overlap between two profiles.
+    This text is passed into the LLM prompt to help it emphasize similarity.
+    """
+
+    src_schools = _normalize_set(source.get("schools", []))
+    rec_schools = _normalize_set(recipient.get("schools", []))
+    src_skills = _normalize_set(source.get("skills", []))
+    rec_skills = _normalize_set(recipient.get("skills", []))
+
+    shared_schools = sorted(src_schools & rec_schools)
+    shared_skills = sorted(src_skills & rec_skills)
+
+    lines = []
+    if shared_schools:
+        lines.append("Shared schools: " + ", ".join(shared_schools))
+    if shared_skills:
+        lines.append("Shared skills: " + ", ".join(shared_skills))
+
+    if not lines:
+        return "None obvious from their profiles."
+    return "\n".join("- " + line for line in lines)
+
+
+def _describe_edge_signals(signals: Dict[str, Any]) -> str:
+    """
+    Convert graph edge 'signals' into a short textual summary.
+    """
+
+    if not isinstance(signals, dict):
+        return "No edge-level signals provided."
+    lines = []
+    if isinstance(signals.get("skill_similarity"), (int, float)):
+        lines.append(f"Skill similarity (edge): {signals['skill_similarity']:.2f}")
+    if signals.get("same_school"):
+        lines.append("Same school (edge)")
+    if signals.get("same_company"):
+        lines.append("Same company (edge)")
+    cats_a = signals.get("categories_a") or []
+    cats_b = signals.get("categories_b") or []
+    if isinstance(cats_a, list) and isinstance(cats_b, list):
+        shared_cats = sorted({c for c in cats_a if c in cats_b})
+        if shared_cats:
+            lines.append("Shared categories: " + ", ".join(shared_cats))
+    if not lines:
+        return "No edge-level signals provided."
+    return "\n".join("- " + line for line in lines)
+
+
+def _build_outreach_prompt_step(
+    source_person: Dict[str, Any],
+    recipient_person: Dict[str, Any],
+    warm_intro_person: Optional[Dict[str, Any]],
+    target_person: Dict[str, Any],
+    next_hop_person: Optional[Dict[str, Any]],
+    signals: Dict[str, Any],
+    step_index: int,
+    total_steps: int,
+    embedding_similarity: Optional[float],
+) -> str:
+    """
+    Build the prompt for ONE outreach message.
+
+    Requirements:
+    - Always from source_person ("I").
+    - Recipient is this hop (or final destination).
+    - Emphasize similarity between source and recipient (skills, schools, embeddings).
+    - If warm_intro_person exists, mention them once as context.
+    - Main ask: short chat / answer 1–2 questions.
+    """
+
+    src_name = source_person.get("name") or "the sender"
+    rec_name = recipient_person.get("name") or "the recipient"
+    warm_name = warm_intro_person.get("name") if warm_intro_person else None
+    target_name = target_person.get("name") or "the final target"
+    next_name = next_hop_person.get("name") if next_hop_person else None
+
+    src_role = source_person.get("role") or ""
+    src_company = source_person.get("company") or ""
+    rec_role = recipient_person.get("role") or ""
+    rec_company = recipient_person.get("company") or ""
+    target_role = target_person.get("role") or ""
+    target_company = target_person.get("company") or ""
+
+    shared_profile_text = _describe_shared_profile(source_person, recipient_person)
+    edge_signals_text = _describe_edge_signals(signals)
+
+    # Turn embedding similarity into guidance (for the model, not for literal output)
+    if embedding_similarity is not None:
+        emb_guidance = (
+            f"Embedding-based similarity between sender and recipient is about "
+            f"{embedding_similarity:.3f} (cosine).\n"
+            "Rough guideline for you:\n"
+            "- ~0.70 or higher: strong overlap – emphasize that your work or background is very similar.\n"
+            "- 0.40–0.70: moderate overlap – mention some shared themes or skills.\n"
+            "- below 0.40: lighter overlap – only a soft reference to overlapping interests.\n"
+            "When writing the message, DO NOT mention any numbers; just use natural phrases "
+            "like 'we both work on similar things', 'our backgrounds overlap', etc."
+        )
+    else:
+        emb_guidance = (
+            "No numeric embedding similarity is available. You can still rely on shared skills, "
+            "schools, or domains if present."
+        )
+
+    # Step context: what has already happened
+    if warm_name:
+        step_context = (
+            f"{src_name} has already had a brief conversation with {warm_name}.\n"
+            f"{warm_name} encouraged {src_name} to reach out to {rec_name} for a quick chat "
+            "and to learn from their experience."
+        )
+    else:
+        step_context = (
+            f"This is the first hop. {src_name} is reaching out directly to {rec_name} "
+            "to ask a few questions and learn from their experience."
+        )
+
+    # Ask: always about a short conversation or answering 1–2 questions
+    if next_name and step_index < total_steps:
+        ask_hint = (
+            f"For this step, the PRIMARY ask is a brief chat (or answering 1–2 short questions) "
+            f"with {rec_name} about their experience and perspective.\n"
+            f"You may VERY SOFTLY suggest that later, if the conversation goes well, "
+            f"{rec_name} could advise who else {src_name} might talk to (possibly including {next_name}), "
+            "but do NOT explicitly ask them to introduce or connect you to anyone in this message."
+        )
+    else:
+        ask_hint = (
+            f"This is the final hop. The PRIMARY ask is a short conversation or the chance to ask "
+            f"1–2 concise questions to {rec_name} about their work, team, or path.\n"
+            "Do not push for introductions; focus on learning and advice."
+        )
+
+    return f"""
+You are a friendly, concise career networking coach.
+
+Write a LinkedIn-style outreach message that {src_name} can send directly to {rec_name}.
+
+Sender (write from this "I" perspective):
+- Name: {src_name}
+- Role: {src_role}
+- Company: {src_company}
+
+Recipient:
+- Name: {rec_name}
+- Role: {rec_role}
+- Company: {rec_company}
+
+Broader context (for you only, not to explain in detail in the message):
+- {src_name} is ultimately interested in learning more around {target_name}'s space
+  (role: {target_role}, company: {target_company}).
+- The path has {total_steps} hops; this message is for step {step_index}.
+
+Step context:
+- {step_context}
+
+Similarity context between sender and recipient:
+- Shared profile features (schools / skills):
+{shared_profile_text}
+
+- Graph edge signals (previous matching between this pair in the network):
+{edge_signals_text}
+
+- Embedding similarity guidance:
+{emb_guidance}
+
+Ask / CTA:
+- {ask_hint}
+
+STYLE RULES (IMPORTANT):
+- 60–110 words.
+- Emphasize overlap or similarity between {src_name} and {rec_name} (background, skills, interests).
+- If {warm_name} is provided, mention them NATURALLY in exactly one sentence, as shared context
+  (e.g., "I recently spoke with {warm_name}, who suggested I reach out to you.").
+- MAIN focus: a quick chat or answering a couple of questions, not building a connection chain.
+- Do NOT explicitly ask them to introduce you to {next_name} or anyone else.
+- Do NOT explicitly ask them to 'connect on LinkedIn'; it's okay if they choose to connect later.
+- Use "I" for {src_name} and "you" for {rec_name}.
+- Sound warm, specific, and low-pressure, not salesy or spammy.
+
+Return ONLY the outreach message text, nothing else.
+""".strip()
+
+def _generate_outreach_message_step(
+    client: OpenAI,
+    source_person: Dict[str, Any],
+    recipient_person: Dict[str, Any],
+    warm_intro_person: Optional[Dict[str, Any]],
+    target_person: Dict[str, Any],
+    next_hop_person: Optional[Dict[str, Any]],
+    signals: Dict[str, Any],
+    step_index: int,
+    total_steps: int,
+    embedding_similarity: Optional[float],  
+) -> str:
+    """
+    Call the OpenAI Chat Completions API to generate a single outreach message.
+
+    Steps:
+    1. Build a structured prompt via `_build_outreach_prompt_step`.
+    2. Send it to `gpt-4o-mini` with a coaching-style system prompt.
+    3. Return the generated message text with surrounding whitespace stripped.
+
+    Args:
+        client:               Initialized `OpenAI` client.
+        source_person:        Dict with sender profile fields (name, role, company, etc.).
+        recipient_person:     Dict with current hop profile fields.
+        warm_intro_person:    Previous hop profile dict, if any.
+        target_person:        Final target profile dict.
+        next_hop_person:      Next hop profile dict, if any.
+        signals:              Graph edge signals for this hop.
+        step_index:           1-based index of this step along the path.
+        total_steps:          Total number of hops in the path.
+        embedding_similarity: Optional cosine similarity between source and this hop.
+
+    Returns:
+        The outreach message text generated by the model.
+    """
+    prompt = _build_outreach_prompt_step(
+        source_person=source_person,
+        recipient_person=recipient_person,
+        warm_intro_person=warm_intro_person,
+        target_person=target_person,
+        next_hop_person=next_hop_person,
+        signals=signals,
+        step_index=step_index,
+        total_steps=total_steps,
+        embedding_similarity=embedding_similarity,
+    )
+
+    resp = client.chat.completions.create(
+        model="gpt-4o-mini",
+        temperature=0.7,
+        messages=[
+            {"role": "system", "content": "You are a helpful career networking coach."},
+            {"role": "user", "content": prompt},
+        ],
+    )
+    return resp.choices[0].message.content.strip()
+
+
 def _norm_list(xs):
+    """Normalize a list of strings: ignore non-string values, dedupe (case-insensitive), trim whitespace."""
     if not isinstance(xs, list):
         return []
     seen, out = set(), []
@@ -159,6 +410,7 @@ def _norm_list(xs):
     return out
 
 def _postprocess(d: dict) -> dict:
+    """Post-process and normalize extracted profile dict."""
     d["schools"] = _norm_list(d.get("schools", []))
     d["skills"] = _norm_list(d.get("skills", []))
     d["keywords"] = _norm_list(d.get("keywords", []))
@@ -195,6 +447,7 @@ def _postprocess(d: dict) -> dict:
     return d
 
 def _slug(p: dict) -> str:
+    """Create a unique slug for a person dict for indexing during ingestion."""
     if not isinstance(p, dict):
         return ""
     pid = (p.get("_id") or p.get("id") or "").strip().lower()
@@ -207,12 +460,18 @@ def _slug(p: dict) -> str:
     ])
 
 def _load_people() -> list:
+    """
+    Load all stored profiles from `data/people.json`.
+    """
     try:
         return json.loads(PEOPLE_JSON.read_text(encoding="utf-8"))
     except Exception:
         return []
 
 def _save_people(rows: list):
+    """
+    Persist the given list of profile dicts to `data/people.json`.
+    """
     PEOPLE_JSON.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def _build_graph_and_index():  
@@ -226,8 +485,10 @@ def _build_graph_and_index():
             detail="No people in database. Ingest profiles first."
         )
 
+    # Build the NetworkX graph G
     G = build_graph(people)
 
+    # Build a `name_to_id` dict mapping lowercase names to the internal _id used in the graph.
     name_to_id = {}
     for p in people:
         name = (p.get("name") or "").strip().lower()
@@ -245,6 +506,9 @@ async def root():
 @app.post("/extract-profiles", response_model=ProfileOut)
 @app.post("/extract-profile", response_model=ProfileOut)
 def extract_profile(payload: ExtractIn):
+    """
+    Extract a structured profile from raw LinkedIn-like text using the LLM.
+    """
     if not payload.text or not payload.text.strip():
         raise HTTPException(status_code=400, detail="Empty input text.")
 
@@ -298,6 +562,9 @@ def ingest_people(payload: IngestIn):
 
 @app.get("/people", response_model=List[ProfileOut])
 def list_people():
+    """
+    Return all stored profiles from `data/people.json`.
+    """
     return _load_people()
 
 @app.post("/generate-routes")
@@ -305,6 +572,7 @@ def generate_routes(payload: RouteRequest):
     """
     Generate top shortest connection routes between two people, given their names.
     """
+    # Build graph and name index
     G, name_to_id = _build_graph_and_index()
 
     src_name = payload.source_name.strip().lower()
@@ -321,9 +589,23 @@ def generate_routes(payload: RouteRequest):
             detail=f"Target '{payload.target_name}' not found",
         )
 
+    # Ensure embeddings exist
+    people = _load_people()
+    if not people:
+        raise HTTPException(status_code=400, detail="No people in database.")
+
+    people = _ensure_embeddings(people)
+
+    name_to_person: Dict[str, Dict[str, Any]] = {}
+    for p in people:
+        nm = (p.get("name") or "").strip().lower()
+        if nm:
+            name_to_person[nm] = p
+
     src_id = name_to_id[src_name]
     tgt_id = name_to_id[tgt_name]
 
+    # Find top-k shortest paths (default max 6 hops, default top 50 paths)
     topk = shortest_paths_ranked(G, src_id, tgt_id, max_hops=6, k=50)
 
     # print("Source resolved to node:", src_id)
@@ -339,6 +621,7 @@ def generate_routes(payload: RouteRequest):
         (nid, G.nodes[nid]["name"]) for nid in G.neighbors(src_id)
     ])
 
+    # Display found paths
     def name(nid): 
         return G.nodes[nid]["name"]
 
@@ -358,6 +641,96 @@ def generate_routes(payload: RouteRequest):
         "target_name": name(tgt_id),
         "paths": None,               
     }
+
+    # Build outreach message sequences for each path
+    def person_from_name(nm: str) -> Optional[Dict[str, Any]]:
+        if not nm:
+            return None
+        return name_to_person.get(nm.strip().lower())
+
+    src_person = person_from_name(payload.source_name)
+    tgt_person = person_from_name(payload.target_name)
+
+    # Limit to top 1 path for outreach message generation
+    MAX_PATHS_WITH_MESSAGES = 1
+
+    # For each path, generate outreach messages for each hop
+    for path in topk[:MAX_PATHS_WITH_MESSAGES]:
+        nodes_in_path = path.get("nodes", [])
+        hops_detail = path.get("hops_detail", [])
+
+        if len(nodes_in_path) < 2:
+            path["outreach_sequence"] = []
+            continue
+
+        total_steps = len(nodes_in_path) - 1
+        outreach_sequence = []
+
+        for step_index in range(1, len(nodes_in_path)):
+            recipient_id = nodes_in_path[step_index]
+            recipient_name = name(recipient_id)
+            recipient_person = person_from_name(recipient_name)
+
+            # warm intro = previous hop in chain (None for first step)
+            warm_intro_person = None
+            warm_intro_id = None
+            if step_index > 1:
+                warm_intro_id = nodes_in_path[step_index - 1]
+                warm_intro_person = person_from_name(name(warm_intro_id))
+
+            # next hop (who we ultimately hope this step can move us toward)
+            next_hop_person = None
+            next_hop_id = None
+            if step_index < len(nodes_in_path) - 1:
+                next_hop_id = nodes_in_path[step_index + 1]
+                next_hop_person = person_from_name(name(next_hop_id))
+
+            # hop signals: match by 'to'
+            hop_signals = {}
+            for h in hops_detail:
+                if h.get("to") == recipient_id:
+                    hop_signals = h.get("signals", {}) or {}
+                    break
+
+            # ---- embedding similarity: source vs THIS recipient ----
+            src_hop_sim = None
+            if src_person is not None and recipient_person is not None:
+                src_emb = np.array(src_person.get("embedding"), dtype=float)
+                rec_emb = np.array(recipient_person.get("embedding"), dtype=float)
+                if src_emb.size and rec_emb.size:
+                    src_hop_sim = float(_cosine_sim(src_emb, rec_emb))
+
+            # Generate outreach message for this step
+            try:
+                msg = _generate_outreach_message_step(
+                    client=client,
+                    source_person=src_person or {"name": payload.source_name},
+                    recipient_person=recipient_person or {"name": recipient_name},
+                    warm_intro_person=warm_intro_person,
+                    target_person=tgt_person or {"name": payload.target_name},
+                    next_hop_person=next_hop_person,
+                    signals=hop_signals,
+                    step_index=step_index,
+                    total_steps=total_steps,
+                    embedding_similarity=src_hop_sim,  
+                )
+            except Exception as e:
+                print("Error generating outreach message for step", step_index, ":", e)
+                msg = ""
+
+            outreach_sequence.append(
+                {
+                    "step": step_index,
+                    "sender_id": src_id,          # always source
+                    "recipient_id": recipient_id,
+                    "warm_intro_id": warm_intro_id,
+                    "embedding_similarity": src_hop_sim,
+                    "message": msg,
+                }
+            )
+
+        # Attach outreach sequence to path
+        path["outreach_sequence"] = outreach_sequence
 
     return {
         "source_name": name(src_id),
