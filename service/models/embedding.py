@@ -8,11 +8,13 @@ from openai import OpenAI
 BASE_DIR = Path(__file__).resolve().parents[1]
 load_dotenv(BASE_DIR / ".env")
 
-api_key = os.environ.get("OPENAI_API_KEY")
+api_key = os.environ.get("api_key")
 if not api_key:
-    raise RuntimeError("OPENAI_API_KEY is not set; check your .env or environment")
+    raise RuntimeError("api_key is not set; check your .env or environment")
 
-client = OpenAI(api_key=api_key)
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=api_key,)
 
 EMBEDDING_MODEL = "text-embedding-3-large"
 

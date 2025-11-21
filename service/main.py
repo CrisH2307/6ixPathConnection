@@ -69,7 +69,10 @@ load_dotenv() # Load environment variables from .env file
 
 # ---------- App ----------
 app = FastAPI()
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.environ["api_key"],
+    )
 
 app.add_middleware(
     CORSMiddleware,
