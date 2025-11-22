@@ -324,7 +324,7 @@ function Home() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.detail || "Unable to generate routes");
-      const fetched = Array.isArray(data.paths) ? data.paths.slice(0, 5) : [];
+      const fetched = Array.isArray(data.paths) ? data.paths.slice(0, 3) : [];
       setPaths(fetched);
       setActivePathIndex(0);
       setStage(STAGES.PATH_VIEW);
@@ -406,7 +406,7 @@ function Home() {
   const inputClasses = "w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200";
 
   const renderDetailsStage = () => (
-    <section className="flex h-full min-h-0 w-full gap-8 rounded-[32px] bg-white p-8 shadow-xl">
+    <section className="flex h-full min-h-0 w-full overflow-auto gap-8 rounded-[32px] bg-white p-8 shadow-xl">
       <div className="flex h-full w-[40%] min-w-[360px] items-center justify-center rounded-3xl bg-slate-100 p-6">
         {resumePreview ? (
           <iframe title="Resume preview" src={resumePreview} className="h-full w-full rounded-2xl border border-slate-200" />
@@ -414,7 +414,7 @@ function Home() {
           <img src="/resume.png" alt="Sample resume" className="max-h-full w-full rounded-2xl object-contain shadow-lg" />
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-4">
+      <div className="flex flex-1 min-h-0 flex-col gap-4 overflow-y-auto pr-1">
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           <label className="text-sm text-slate-500">
             <span>From</span>
@@ -466,7 +466,7 @@ function Home() {
           ))}
         </div>
         <p className="text-xs italic text-slate-500">Hang tight - this takes just a few seconds.</p>
-        <div className="h-auto w-full bg-slate-200 p-3 rounded-lg m-4" >
+        <div className="h-auto w-full bg-slate-200 p-3 rounded-lg my-4" >
           <p className="text-md italic text-red-500 font-semibold">Fact: Employers are hiring at one of the slowest paces in over a decade, even as the official unemployment rate remains relatively low</p>
         </div>
       </div>
@@ -492,7 +492,7 @@ function Home() {
                   className={`rounded-full border px-3 py-1 text-xs font-semibold ${index === activePathIndex ? "border-slate-900 bg-slate-900 text-white" : "border-slate-200 bg-white text-slate-700"}`}
                   onClick={() => setActivePathIndex(index)}
                 >
-                  Path {index + 1} · score {path.score?.toFixed(2)}
+                  Path {index + 1} - score {path.score?.toFixed(2)}
                 </button>
               ))}
             </div>
